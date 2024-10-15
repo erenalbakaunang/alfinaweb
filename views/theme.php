@@ -15,31 +15,30 @@
 
 
     <!-- App css -->
-    <link href="https://toss.telkomuniversity.ac.id/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://toss.telkomuniversity.ac.id/assets/css/jquery-ui.min.css" rel="stylesheet">
-    <link href="https://toss.telkomuniversity.ac.id/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://toss.telkomuniversity.ac.id/assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://toss.telkomuniversity.ac.id/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/jquery-ui.min.css" rel="stylesheet">
+    <link href="assets/plugins/fontawesome/css/all.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/metisMenu.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body>
-
-    <!-- leftbar -->
-    <!-- leftbar-tab-menu -->
-    <div class="leftbar-tab-menu">
-        <?php require('views/partials/nav.php'); ?>
-    </div>
-    <!-- end leftbar-tab-menu-->
-
     <!-- toptbar -->
     <!-- Top Bar Start -->
     <div class="topbar">
-       <?php require('views/partials/header.php'); ?>
+        <?php require('views/partials/header.php'); ?>
     </div>
     <!-- Top Bar End -->
-    
+
     <div class="page-wrapper">
+        <!-- leftbar -->
+        <!-- leftbar-tab-menu -->
+        <div class="leftbar-tab-menu">
+            <?php require('views/partials/nav.php'); ?>
+        </div>
+        <!-- end leftbar-tab-menu-->
+
         <!-- Page Content-->
         <div class="page-content-tab">
             <?php require($content); ?>
@@ -90,14 +89,14 @@
     <!-- end page-wrapper -->
 
     <!-- jQuery  -->
-    <script src="https://toss.telkomuniversity.ac.id/assets/js/jquery.min.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/assets/js/jquery-ui.min.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/assets/js/metismenu.min.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/assets/js/waves.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/assets/js/feather.min.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/assets/js/jquery.slimscroll.min.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/plugins/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/metismenu.min.js"></script>
+    <script src="assets/js/waves.js"></script>
+    <script src="assets/js/feather.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <script src="assets/plugins/apexcharts/apexcharts.min.js"></script>
 
     <!-- footerScript -->
     <script>

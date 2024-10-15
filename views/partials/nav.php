@@ -1,6 +1,6 @@
 <div class="main-icon-menu">
     <nav class="nav">
-        <a href="/dashboard" class="mb-3"
+        <a href="/alfinaweb" class="mb-3"
             style="position: relative;padding: 0;color: #ffffff;width: 80px;height: 50px;display: flex;align-items: center;justify-content: center;"
             data-toggle="tooltip-custom" data-placement="right" data-trigger="hover" title=""
             data-original-title="Dashboard">
@@ -18,13 +18,7 @@
 <div class="main-menu-inner">
     <!-- LOGO -->
     <div class="topbar-left">
-        <a href="/dashboard" class="logo">
-            <span>
-                <img src="https://toss.telkomuniversity.ac.id/images/logo-toss.png" alt="logo-large"
-                    class="logo-lg logo-dark">
-                <!-- <img src="https://toss.telkomuniversity.ac.id/assets/images/logo.png" alt="logo-large" class="logo-lg logo-light"> -->
-            </span>
-        </a>
+        
     </div>
     <!--end logo-->
     <div class="menu-body slimscroll">

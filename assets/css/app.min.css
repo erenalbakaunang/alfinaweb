@@ -515,7 +515,8 @@ File: Topbar
 .navbar-custom {
   background: #ffffff;
   margin-left: 270px;
-  min-height: 70px;
+  margin-left: 0px;
+  min-height: 50px;
   box-shadow: 6px 0px 6px rgba(31, 30, 47, 0.06);
   position: relative;
 }
@@ -523,8 +524,8 @@ File: Topbar
 .navbar-custom .nav-link {
   padding: 0 0.75rem;
   color: #7081b9;
-  line-height: 70px;
-  max-height: 70px;
+  line-height: 50px;
+  max-height: 40px;
 }
 
 .navbar-custom .nav-link .nav-icon {
@@ -2227,12 +2228,15 @@ File: leftbar-tab Css
 }
 
 .page-content-tab {
-  width: calc(100% - 270px);
+  /* width: calc(100% - 270px); */
+  width: 100%;
   margin-left: auto;
   position: relative;
   min-height: calc(100vh - 70px);
   padding: 0 10px 60px 10px;
-  margin-top: 70px;
+  margin-top: 60px;
+  margin-left: 10px;
+  background: white;
 }
 
 .navbar-custom .responsive-logo {
@@ -2240,7 +2244,7 @@ File: leftbar-tab Css
 }
 
 .leftbar-tab-menu {
-  min-width: 270px;
+  min-width: 200px;
   z-index: 1001;
 }
 
@@ -2254,6 +2258,7 @@ File: leftbar-tab Css
   z-index: 1001;
   position: fixed;
   top: 0;
+  display: none !important;
 }
 
 .leftbar-tab-menu .main-icon-menu .logo-metrica .logo-sm {
@@ -2350,9 +2355,10 @@ File: leftbar-tab Css
   height: 100%;
   background-color: #ffffff;
   border-right: 1px solid #eceff5;
-  position: fixed;
-  top: 0;
-  left: 70px;
+  /* position: fixed; */
+  /* top: 0; */
+  /* left: 70px; */
+  margin-top: 60px;
   z-index: 600;
   box-shadow: 0px 2px 4px rgba(31, 30, 47, 0.1);
 }
@@ -10946,4 +10952,9 @@ input:-webkit-autofill:focus {
 
 .blog-card p {
   font-family: "Poppins", sans-serif;
+}
+
+.logo-toss {
+  height: 40px;
+  margin: 5px 10px 5px 0px;
 }

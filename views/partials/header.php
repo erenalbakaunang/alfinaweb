@@ -1,9 +1,29 @@
 <!-- Navbar -->
 <nav class="navbar-custom">
+    <div class="float-left">
+        <ul class="list-unstyled topbar-nav mb-0">
+            <li>
+                <button class="button-menu-mobile nav-link">
+                    <i class="fas fa-bars align-self-center"></i>
+                </button>
+            </li>
+
+            <li>
+                <a href="/dashboard" class="logo logo-toss">
+                    <span>
+                        <img src="https://toss.telkomuniversity.ac.id/images/logo-toss.png" alt="logo-large"
+                            class="logo-lg logo-dark logo-toss">
+                        <!-- <img src="https://toss.telkomuniversity.ac.id/assets/images/logo.png" alt="logo-large" class="logo-lg logo-light"> -->
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+        
     <ul class="list-unstyled topbar-nav float-right mb-0">
         <li class="hidden-sm">
             <a class="nav-link  waves-effect waves-light" href="javascript: void(0);" role="button">
-                STUDENT <i class="ml-2 fas fa-caret-down"></i>
+                <i class="fas fa-bell"></i>
             </a>
         </li>
         <li class="dropdown notification-list">
@@ -83,20 +103,5 @@
     </ul>
     <!--end topbar-nav-->
 
-    <ul class="list-unstyled topbar-nav mb-0">
-        <li>
-            <a href="/dashboard">
-                <span class="responsive-logo">
-                    <img src="https://toss.telkomuniversity.ac.id/images/toss.png" alt="logo-small"
-                        class="logo-sm align-self-center" height="34">
-                </span>
-            </a>
-        </li>
-        <li>
-            <button class="button-menu-mobile nav-link">
-                <i class="fas fa-bars align-self-center"></i>
-            </button>
-        </li>
-    </ul>
 </nav>
 <!-- end navbar-->
