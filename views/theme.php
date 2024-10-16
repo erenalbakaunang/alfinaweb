@@ -100,6 +100,19 @@
     <!-- footerScript -->
     <script>
         $(function () {
+            // Logic to handle surat form on view mode or not
+            <?php if(isset($_GET['view'])) { ?>
+                $('.row-detail-page form.form-group').each(function() {
+                    $(this).on('submit', function(){
+                        return false;
+                    });
+
+                    $(this).find('input, select').attr({
+                        disabled : 'disabled'
+                    })
+                });
+            <?php } ?>
+
             $("#result").hide();
             $('#search').click(function () {
                 $("#result").show();

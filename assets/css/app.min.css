@@ -10982,3 +10982,6 @@ input:-webkit-autofill:focus {
   padding-top: 20px;
   padding-left: 10px;
 }
+.form-group.fgb a {
+  margin-left: 10px;
+}

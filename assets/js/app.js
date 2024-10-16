@@ -249,6 +249,10 @@
     }
 
 
+    $('.datepicker').datepicker({
+        dateFormat: 'dd/mm/yy'
+    });
+
 
     function init() {
         initSlimscroll();
