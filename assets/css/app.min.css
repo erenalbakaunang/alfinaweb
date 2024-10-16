@@ -10959,3 +10959,26 @@ input:-webkit-autofill:focus {
   height: 40px;
   margin: 5px 10px 5px 0px;
 }
+
+.card-body .row{
+  margin-left: -20px !important;
+  margin-right: -20px !important;
+  margin-top: -20px !important;
+}
+
+.left-back-link{
+  max-width: 30px;
+}
+.left-back-link a{
+  font-size: 20px;
+  line-height: 39px;
+}
+.label-content{
+  /* padding-left: 10px; */
+  font-size: 17px;
+  padding-bottom: 10px;
+}
+.row-detail-page{
+  padding-top: 20px;
+  padding-left: 10px;
+}

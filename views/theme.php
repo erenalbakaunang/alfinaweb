@@ -11,8 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="https://toss.telkomuniversity.ac.id/images/toss.png">
-
+    <link rel="shortcut icon" href="images/toss.png">
 
     <!-- App css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -135,7 +134,7 @@
     </script>
 
     <!-- App js -->
-    <script src="https://toss.telkomuniversity.ac.id/assets/js/app.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>

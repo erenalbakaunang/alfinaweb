@@ -34,6 +34,14 @@
     </div>
 
     <div class="col-lg-4">
+    
+    </div>
+
+    <div class="col-lg-4">
+        
+    </div>
+
+    <div class="col-lg-4">
         <div class="card">
             <div class="card-body">
                 <div class="icon-contain">
