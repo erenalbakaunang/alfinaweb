@@ -1,68 +1,88 @@
-<div class="main-icon-menu">
-    <nav class="nav">
-        <a href="/alfinaweb" class="mb-3"
-            style="position: relative;padding: 0;color: #ffffff;width: 80px;height: 50px;display: flex;align-items: center;justify-content: center;"
-            data-toggle="tooltip-custom" data-placement="right" data-trigger="hover" title=""
-            data-original-title="Dashboard">
-            <i class="align-self-center menu-icon icon-dual fas fa-desktop"></i>
-        </a>
-        <a href="#services" class="nav-link" data-toggle="tooltip-custom" data-placement="right" data-trigger="hover"
-            title="" data-original-title="Services">
-            <i class="align-self-center menu-icon icon-dual fas fa-user-graduate "></i>
-        </a>
-        <!--end MetricaUikit-->
-    </nav>
-    <!--end nav-->
-</div>
-<!--end main-icon-menu-->
 <div class="main-menu-inner">
-    <!-- LOGO -->
-    <div class="topbar-left">
-        
+    <div class="title-box text-center">
+        <a class="pp nav-link waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
+            aria-haspopup="false" aria-expanded="false">
+            <img src="https://images.telkomuniversity.ac.id/pmb/2021/PAS_FOTO/11445335820_PAS_FOTO_1.jpg"
+                alt="profile-user" class="rounded-circle wd-30 ht-30" />
+
+        </a>
+
+        <h6>
+            1301204382<br>
+            Alfina Rahmawati<br>
+            Mahasiswa
+        </h6>
     </div>
+
     <!--end logo-->
     <div class="menu-body slimscroll">
         <div id="services" class="main-icon-menu-pane">
-            <div class="title-box">
-                <h6 class="menu-title">One Stop Services</h6>
-            </div>
             <ul class="nav metismenu">
-                <li class="nav-item "><a class="nav-link " href="/student/active-letters">
-                        Active Letters
-                    </a></li>
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript: void(0);"><span class="w-100">
-                            Cover Letter
-                        </span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
-                    <ul class="nav-second-level" aria-expanded="false">
-                        <li class=""><a href="/student/course-cover-letters">For Course</a></li>
-                        <li class=""><a href="/student/research-cover-letters">For Research</a></li>
-                        <li class=""><a href="/student/internship-cover-letters">For Internship</a></li>
+                    <a class="nav-link " href="/">
+                        <i class="fa fa-desktop"></i>
+                        Beranda
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript: void(0);">
+                        <i class="fa fa-user-graduate"></i>
+                        <span class="w-100">
+                            Layanan
+                        </span>
+                        <span class="menu-arrow">
+                            <i class="fa fa-chevron-right"></i>
+                        </span>
+                    </a>
+
+                    <ul class="nav-second-level pl-1" aria-expanded="false">
+                        <li class="nav-item">
+                            <a class="nav-link " href="?p=surat_sam">
+                                Surat Aktif Mahasiswa
+                            </a>
+                        </li>
+                        <li class="nav-item mt-0">
+                            <a class="nav-link" href="javascript: void(0);">
+                                <span class="w-100">
+                                    Surat Keterangan
+                                </span>
+                                <span class="menu-arrow">
+                                    <i class="fa fa-chevron-right"></i>
+                                </span>
+                            </a>
+
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li class=""><a href="?p=surat_spmk">Untuk Matakuliah</a></li>
+                                <li class=""><a href="?p=surat_spt">Untuk Penelitian</a></li>
+                                <li class=""><a href="?p=surat_kp">Untuk Kerja Praktek/Magang</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item my-4 ">
+                            <a class="nav-link" href="?p=surat_dispensasi">
+                                Surat Dispensasi
+                            </a>
+                        </li>
+                        <li class="nav-item my-4 ">
+                            <a class="nav-link" href="?p=surat_rekomendasi_beasiswa">
+                                Surat Rekomendasi Beasiswa
+                            </a>
+                        </li>
+                        <li class="nav-item my-4 ">
+                            <a class="nav-link" href="?p=surat_berkelakuan_baik">
+                                Surat Berkelakuan Baik
+                            </a>
+                        </li>
+                        <li class="nav-item my-4 ">
+                            <a class="nav-link" href="?p=surat_tugas_kompetisi">
+                                Surat Tugas Kompetisi
+                            </a>
+                        </li>
                     </ul>
-                </li>
-                <li class="nav-item my-4 ">
-                    <a class="nav-link" href="/student/dispensation-letters">
-                        Dispensation Letters
-                    </a>
-                </li>
-                <li class="nav-item my-4 ">
-                    <a class="nav-link" href="/student/scholarship-letters">
-                        Scholarship Recommendation Letters
-                    </a>
-                </li>
-                <li class="nav-item my-4 ">
-                    <a class="nav-link" href="/student/good-conduct-letters">
-                        Statement of Good Conduct
-                    </a>
-                </li>
-                <li class="nav-item my-4 ">
-                    <a class="nav-link" href="/student/competition-assignment-letters">
-                        Competition Assignment Letters
-                    </a>
                 </li>
                 <!--end nav-item-->
             </ul>
         </div>
     </div>
-    <!--end menu-body-->
 </div><!-- end main-menu-inner-->

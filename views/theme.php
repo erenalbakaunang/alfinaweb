@@ -13,6 +13,11 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="images/toss.png">
 
+    <link href="https://toss.telkomuniversity.ac.id/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://toss.telkomuniversity.ac.id/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <!-- Responsive datatable examples -->
+    <link href="https://toss.telkomuniversity.ac.id/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
     <!-- App css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/jquery-ui.min.css" rel="stylesheet">
@@ -97,11 +102,27 @@
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/plugins/apexcharts/apexcharts.min.js"></script>
 
+    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/jszip.min.js"></script>
+    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/pdfmake.min.js"></script>
+    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/vfs_fonts.js"></script>
+    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/buttons.html5.min.js"></script>
+    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/buttons.print.min.js"></script>
+    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/responsive.bootstrap4.min.js"></script>
+    <script src="https://toss.telkomuniversity.ac.id/assets/pages/jquery.datatable.init.js"></script>
+
     <!-- footerScript -->
     <script>
         $(function () {
             // Logic to handle surat form on view mode or not
-            <?php if(isset($_GET['view'])) { ?>
+            <?php if(isset($_GET['form']) && $_GET['form'] == 'view') { ?>
                 $('.row-detail-page form.form-group').each(function() {
                     $(this).on('submit', function(){
                         return false;
@@ -109,7 +130,9 @@
 
                     $(this).find('input, select').attr({
                         disabled : 'disabled'
-                    })
+                    });
+
+                    $(this).find('button, small').hide();
                 });
             <?php } ?>
 

@@ -108,30 +108,45 @@
         case 'ditolak_datakompetisi':
             $content = 'ditolak_datakompetisi.php';
             break;
+
+        // LAYANAN
         case 'surat_sam':
-            $content = 'surat_aktif_mahasiswa.php';
+            if(isset($_GET['form'])) {
+                $content = 'surat_aktif_mahasiswa.php';
+            } else {
+                $content = 'index_surat_aktif_mahasiswa.php';
+            }
             break;
+
         case 'surat_spmk':
             $content = 'surat_pengantar_mata_kuliah.php';
             break;
+
         case 'surat_spt':
             $content = 'surat_pengantar_ta.php';
             break; 
+
         case 'surat_kp':
             $content = 'surat_pengantar_kp.php';
             break;
+
         case 'surat_dispensasi':
             $content = 'surat_dispensasi.php';
             break;
+
         case 'surat_rekomendasi_beasiswa':
             $content = 'surat_rekomendasi_beasiswa.php';
             break;
+
         case 'surat_berkelakuan_baik':
             $content = 'surat_berkelakuan_baik.php';
             break;
+            
         case 'surat_tugas_kompetisi':
             $content = 'surat_tugas_kompetisi.php';
             break;
+
+
         default:
             $content = 'dashboard.php';
             break;

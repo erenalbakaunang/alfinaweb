@@ -84,12 +84,12 @@
             </div>
         </li>
         <li class="dropdown">
-            <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#"
-                role="button" aria-haspopup="false" aria-expanded="false">
-                <img src="https://images.telkomuniversity.ac.id/pmb/2021/PAS_FOTO/11445335820_PAS_FOTO_1.jpg"
-                    alt="profile-user" class="rounded-circle wd-30 ht-30" />
-
+            <a href="" class="dropdown-item">
+                <button class="btn btn-danger">
+                    Keluar
+                </button>
             </a>
+
             <div class="dropdown-menu dropdown-menu-right">
                 <a class="dropdown-item" href="#"><i class="fas fa-user-circle text-muted mr-2"></i> Profile</a>
                 <div class="dropdown-divider"></div>
