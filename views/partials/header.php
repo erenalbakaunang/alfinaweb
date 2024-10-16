@@ -1,6 +1,6 @@
 <!-- Navbar -->
 <nav class="navbar-custom">
-    <div class="float-left">
+    <div class="float-left" style="position: absolute; z-index: 9999;;">
         <ul class="list-unstyled topbar-nav mb-0">
             <li>
                 <button class="button-menu-mobile nav-link">
@@ -11,7 +11,7 @@
             <li>
                 <a href="/dashboard" class="logo logo-toss">
                     <span>
-                        <img src="https://toss.telkomuniversity.ac.id/images/logo-toss.png" alt="logo-large"
+                        <img src="assets/images/logo-toss.png" alt="logo-large"
                             class="logo-lg logo-dark logo-toss">
                         <!-- <img src="https://toss.telkomuniversity.ac.id/assets/images/logo.png" alt="logo-large" class="logo-lg logo-light"> -->
                     </span>
