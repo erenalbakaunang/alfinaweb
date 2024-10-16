@@ -119,31 +119,59 @@
             break;
 
         case 'surat_spmk':
-            $content = 'surat_pengantar_mata_kuliah.php';
+            if(isset($_GET['form'])) {
+                $content = 'surat_pengantar_mata_kuliah.php';
+            } else {
+                $content = 'index_surat_pengantar_mata_kuliah.php';
+            }
             break;
 
         case 'surat_spt':
-            $content = 'surat_pengantar_ta.php';
-            break; 
+            if(isset($_GET['form'])) {
+                $content = 'surat_pengantar_ta.php';
+            } else {
+                $content = 'index_surat_pengantar_ta.php';
+            }
+            break;
 
         case 'surat_kp':
-            $content = 'surat_pengantar_kp.php';
+            if(isset($_GET['form'])) {
+                $content = 'surat_pengantar_kp.php';
+            } else {
+                $content = 'index_surat_pengantar_kp.php';
+            }
             break;
 
         case 'surat_dispensasi':
-            $content = 'surat_dispensasi.php';
+            if(isset($_GET['form'])) {
+                $content = 'surat_dispensasi.php';
+            } else {
+                $content = 'index_surat_dispensasi.php';
+            }
             break;
 
         case 'surat_rekomendasi_beasiswa':
-            $content = 'surat_rekomendasi_beasiswa.php';
+            if(isset($_GET['form'])) {
+                $content = 'surat_rekomendasi_beasiswa.php';
+            } else {
+                $content = 'index_surat_rekomendasi_beasiswa.php';
+            }
             break;
 
         case 'surat_berkelakuan_baik':
-            $content = 'surat_berkelakuan_baik.php';
+            if(isset($_GET['form'])) {
+                $content = 'surat_berkelakuan_baik.php';
+            } else {
+                $content = 'index_surat_berkelakuan_baik.php';
+            }
             break;
             
         case 'surat_tugas_kompetisi':
-            $content = 'surat_tugas_kompetisi.php';
+            if(isset($_GET['form'])) {
+                $content = 'surat_tugas_kompetisi.php';
+            } else {
+                $content = 'index_surat_tugas_kompetisi.php';
+            }
             break;
 
 
