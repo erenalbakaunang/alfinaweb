@@ -83,7 +83,8 @@
     function initActiveMenu() {
         // === following js will activate the menu in left side bar based on url ====
         $(".leftbar-tab-menu a, .left-sidenav a").each(function () {
-            var pageUrl = window.location.href.split(/[?#]/)[0];
+            var pageUrl = window.location.href.split(/[&#]/)[0];
+            
             if (this.href == pageUrl) {
                 $(this).addClass("active");
                 $(this).parent().addClass("active"); // add active to li of the current link                 
@@ -95,6 +96,11 @@
                 $(this).parent().parent().parent().parent().addClass("mm-show"); // add active to li of the current link                
                 $(this).parent().parent().parent().parent().parent().addClass("mm-active");
                 $(this).parent().parent().parent().parent().parent().addClass("active");
+
+                let theParent = $(this).parents('.theParent');
+                theParent.addClass('mm-active');
+                theParent.children('a.nav-link').addClass('active');
+                
                 var menu = $(this).closest('.main-icon-menu-pane').attr('id');
                 $("a[href='#" + menu + "']").addClass('active');
 

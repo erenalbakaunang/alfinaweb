@@ -133,6 +133,16 @@
                 });
             <?php } ?>
 
+            // To handle select option on selected value
+            $('select').each(function(){
+                let selectedValue = $(this).attr('data-selected');
+                $(this).find('option').each(function(){
+                    if($(this).attr('value') == selectedValue) {
+                        $(this).attr('selected', 'selected');
+                    }
+                });
+            });
+
             $("#result").hide();
             $('#search').click(function () {
                 $("#result").show();

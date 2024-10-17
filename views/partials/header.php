@@ -9,7 +9,7 @@
             </li>
 
             <li>
-                <a href="/dashboard" class="logo logo-toss">
+                <a href="/" class="logo logo-toss">
                     <span>
                         <img src="assets/images/logo-toss.png" alt="logo-large"
                             class="logo-lg logo-dark logo-toss">
@@ -84,12 +84,13 @@
             </div>
         </li>
         <li class="dropdown">
-            <a href="" class="dropdown-item">
+            <a href="?p=logout" class="dropdown-item">
                 <button class="btn btn-danger">
                     Keluar
                 </button>
             </a>
 
+            <!--
             <div class="dropdown-menu dropdown-menu-right">
                 <a class="dropdown-item" href="#"><i class="fas fa-user-circle text-muted mr-2"></i> Profile</a>
                 <div class="dropdown-divider"></div>
@@ -99,6 +100,7 @@
                             class="fas fa-power-off text-muted mr-2"></i> Logout</button>
                 </form>
             </div>
+                -->
         </li>
     </ul>
     <!--end topbar-nav-->

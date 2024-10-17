@@ -8,9 +8,9 @@
         </a>
 
         <h6>
-            1301204382<br>
-            Alfina Rahmawati<br>
-            Mahasiswa
+            <?= $loginData['nim'] ?><br>
+            <?= $loginData['nama'] ?><br>
+            <?= $loginData['role'] ?>
         </h6>
     </div>
 
@@ -25,7 +25,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item theParent">
                     <a class="nav-link" href="javascript: void(0);">
                         <i class="fa fa-user-graduate"></i>
                         <span class="w-100">
@@ -42,7 +42,7 @@
                                 Surat Aktif Mahasiswa
                             </a>
                         </li>
-                        <li class="nav-item mt-0">
+                        <li class="nav-item mt-0 theParent">
                             <a class="nav-link" href="javascript: void(0);">
                                 <span class="w-100">
                                     Surat Keterangan

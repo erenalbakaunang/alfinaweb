@@ -32,7 +32,7 @@
                             <tr>
                                 <td><?= $dt['nama'] ?></td>
                                 <td><?= $dt['tujuan'] ?></td>
-                                <td><?= $dt['status'] ?></td>
+                                <td><?= $dt['status'] ?? '' ?></td>
                                 <td>
                                     <a href="?p=surat_sam&form=view&id=<?= $dt['id'] ?>" class="btn btn-info" title="View">
                                         <i class="fa fa-search"></i>

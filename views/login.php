@@ -15,7 +15,7 @@
         <link href="assets/css/jquery-ui.min.css" rel="stylesheet">
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
         <link href="assets/css/metisMenu.min.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/app.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/login.css" rel="stylesheet" type="text/css">
     </head>
 
     <body class="account-body accountbg">
@@ -40,7 +40,7 @@
                         <div class="card-access auth-card shadow-lg" style="background-color: #c60202;">
                             <div class="card-body">
                                 <div class="px-3">
-                                    <form class="form-horizontal auth-form my-4" method="POST" action="https://toss.telkomuniversity.ac.id/login">
+                                    <form class="form-horizontal auth-form my-4" method="POST" action="">
                                         <input type="hidden" name="_token" value="6QHaGjKmI6DrsRNgDh4j3SQRuwukDAlLz1Rn8RCp">                                    <div class="form-group">
                                             <label for="username" class="label-access">Username</label>
                                             <div class="input-group mb-3">
@@ -48,8 +48,6 @@
                                                     <i class="dripicons-user"></i>
                                                 </span>
                                                 <input id="username" type="text" placeholder="username" class="form-control " name="username" value="" required="" autocomplete="username" autofocus="">
-
-                                                
                                             </div>
                                         </div>
                                         <!--end form-group-->
@@ -64,8 +62,6 @@
                                                 </span>
 
                                                 <input id="password" type="password" placeholder="Password" class="form-control " name="password" value="" required="" autocomplete="current-password">
-
-                                                
                                             </div>
                                         </div>
                                         <!--end form-group-->

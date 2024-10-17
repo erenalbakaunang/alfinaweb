@@ -35,7 +35,7 @@
                     <tbody>
                     <?php foreach($data as $key => $dt) { ?>
                         <tr>
-                            <td><?= $dt['nama'] ?></td>
+                            <td><?= show_tanggal($dt['Tanggal']) ?></td>
                             <td><?= $dt['tujuan'] ?></td>
                             <td><?= $dt['status'] ?></td>
                             <td>

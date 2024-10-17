@@ -1,11 +1,34 @@
 <?php
-    session_start();
+session_start();
+require_once('db.php');
+require_once('helpers.php');
+
+if (!isset($_SESSION['login'])) {
+    if(isset($_POST['username']) && isset($_POST['password'])) {
+        $check = data_pengguna($_POST['username'], $_POST['password']);
+
+        if($check) {
+            $_SESSION['login'] = $check;
+            header('location:/');
+            exit;
+        }
+    }
+
+    require('views/login.php');
+
+} else {
     define('PARAM', $_GET['p'] ?? '');
     define('DATA_ID', $_GET['id'] ?? '');
 
-    require_once('db.php');
+    $loginData = $_SESSION['login'];
 
-    switch(PARAM):
+    switch (PARAM):
+        case 'logout':
+            unset($_SESSION['login']);
+            header('location:/');
+            exit;
+            break;
+
         case 'disetujui':
             $content = 'disetujui.php';
             break;
@@ -134,15 +157,52 @@
         // LAYANAN
         case 'surat_sam':
             $data = data_surat_aktif_mahasiswa(DATA_ID);
-            if(isset($_GET['form'])) {
+            if (isset($_GET['form'])) {
+                if(DATA_ID) {
+                    $data = $data[0];
+                }
                 $content = 'surat_aktif_mahasiswa.php';
             } else {
                 $content = 'index_surat_aktif_mahasiswa.php';
             }
+
+            // start saving data
+            if(!empty($_POST)) {
+                $formData = $_POST;
+                $formData['status'] = '';
+                $formData['Tanggal'] = date('Y-m-d');
+
+                $sql = 'INSERT INTO surat_aktif_mahasiswa(
+                        bahasa, tujuan, nama, nim, program_studi, alamat, status, Tanggal, Lainnya, Nama_Ortu, Pekerjaan_Ortu, Nip_Ortu
+                    ) VALUES (
+                        :bahasa, :tujuan, :nama, :nim, :program_studi, :alamat, :status, :Tanggal, :Lainnya, :Nama_Ortu, :Pekerjaan_Ortu, :Nip_Ortu
+                    )';
+        
+                $statement = $pdo->prepare($sql);
+                $result = $statement->execute([
+                    'bahasa' => $formData['bahasa'],
+                    'tujuan' => $formData['tujuan'],
+                    'nama' => $formData['nama'],
+                    'nim' => $formData['nim'],
+                    'program_studi' => $formData['program_studi'],
+                    'alamat' => $formData['alamat'],
+                    'status' => $formData['status'],
+                    'Tanggal' => $formData['Tanggal'],
+                    'Lainnya' => $formData['Lainnya'],
+                    'Nama_Ortu' => $formData['Nama_Ortu'],
+                    'Pekerjaan_Ortu' => $formData['Pekerjaan_Ortu'],
+                    'Nip_Ortu' => $formData['Nip_Ortu'],
+                ]);
+
+                if($result) {
+                    header('location: ?p=surat_sam');
+                }
+                // end saving data
+            }
             break;
 
         case 'surat_spmk':
-            if(isset($_GET['form'])) {
+            if (isset($_GET['form'])) {
                 $content = 'surat_pengantar_mata_kuliah.php';
             } else {
                 $content = 'index_surat_pengantar_mata_kuliah.php';
@@ -150,7 +210,7 @@
             break;
 
         case 'surat_spt':
-            if(isset($_GET['form'])) {
+            if (isset($_GET['form'])) {
                 $content = 'surat_pengantar_ta.php';
             } else {
                 $content = 'index_surat_pengantar_ta.php';
@@ -158,7 +218,7 @@
             break;
 
         case 'surat_kp':
-            if(isset($_GET['form'])) {
+            if (isset($_GET['form'])) {
                 $content = 'surat_pengantar_kp.php';
             } else {
                 $content = 'index_surat_pengantar_kp.php';
@@ -166,7 +226,7 @@
             break;
 
         case 'surat_dispensasi':
-            if(isset($_GET['form'])) {
+            if (isset($_GET['form'])) {
                 $content = 'surat_dispensasi.php';
             } else {
                 $content = 'index_surat_dispensasi.php';
@@ -174,7 +234,7 @@
             break;
 
         case 'surat_rekomendasi_beasiswa':
-            if(isset($_GET['form'])) {
+            if (isset($_GET['form'])) {
                 $content = 'surat_rekomendasi_beasiswa.php';
             } else {
                 $content = 'index_surat_rekomendasi_beasiswa.php';
@@ -182,15 +242,15 @@
             break;
 
         case 'surat_berkelakuan_baik':
-            if(isset($_GET['form'])) {
+            if (isset($_GET['form'])) {
                 $content = 'surat_berkelakuan_baik.php';
             } else {
                 $content = 'index_surat_berkelakuan_baik.php';
             }
             break;
-            
+
         case 'surat_tugas_kompetisi':
-            if(isset($_GET['form'])) {
+            if (isset($_GET['form'])) {
                 $content = 'surat_tugas_kompetisi.php';
             } else {
                 $content = 'index_surat_tugas_kompetisi.php';
@@ -204,4 +264,5 @@
     endswitch;
 
     require('views/theme.php');
+}
 ?>
