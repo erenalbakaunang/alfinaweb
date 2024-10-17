@@ -28,7 +28,7 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_aktif_mahasiswa()) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
                                     <a href="?p=disetujui_dataktif">
@@ -58,7 +58,7 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_pengantar_mata_kuliah()) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
                                     <a href="?p=disetujui_datamatkul">
@@ -88,10 +88,10 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_pengantar_ta()) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <a href="?p=disetujui&cat=">
+                                    <a href="?p=disetujui_datapenelitian">
                                         <button class="btn btn-danger">
                                             Lihat
                                         </button>
@@ -118,10 +118,10 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_pengantar_kp()) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <a href="?p=disetujui&cat=">
+                                    <a href="?p=disetujui_datamagang">
                                         <button class="btn btn-danger">
                                             Lihat
                                         </button>
@@ -148,10 +148,10 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_dispensasi()) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <a href="?p=disetujui&cat=">
+                                    <a href="?p=disetujui_datadispen">
                                         <button class="btn btn-danger">
                                             Lihat
                                         </button>
@@ -178,10 +178,10 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_rekomendasi_beasiswa()) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <a href="?p=disetujui&cat=">
+                                    <a href="?p=disetujui_databeasiswa">
                                         <button class="btn btn-danger">
                                             Lihat
                                         </button>
@@ -208,10 +208,10 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_berkelakuan_baik()) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <a href="?p=disetujui&cat=">
+                                    <a href="?p=disetujui_databaik">
                                         <button class="btn btn-danger">
                                             Lihat
                                         </button>
@@ -238,10 +238,10 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_tugas_kompetisi()) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <a href="?p=disetujui&cat=">
+                                    <a href="?p=disetujui_datakompetisi">
                                         <button class="btn btn-danger">
                                             Lihat
                                         </button>

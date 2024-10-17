@@ -1,6 +1,9 @@
 <?php
     session_start();
     define('PARAM', $_GET['p'] ?? '');
+    define('DATA_ID', $_GET['id'] ?? '');
+
+    require_once('db.php');
 
     switch(PARAM):
         case 'disetujui':
@@ -30,33 +33,52 @@
         case 'disetujui_detailkompetisi':
             $content = 'disetujui_detailkompetisi.php';
             break;
+
         case 'disetujui_dataktif':
-            $content = 'disetujui_dataktif.php';
+            $label = 'Surat Aktif Mahasiswa';
+            $data = data_surat_aktif_mahasiswa();
+            $content = 'disetujui_table.php';
             break;
         case 'disetujui_datamatkul':
-            $content = 'disetujui_datamatkul.php';
+            $label = 'Surat Keterangan Mata Kuliah';
+            $data = data_surat_pengantar_mata_kuliah();
+            $content = 'disetujui_table.php';
             break;
         case 'disetujui_datapenelitian':
-            $content = 'disetujui_datapenelitian.php';
+            $label = 'Surat Keterangan Penelitian';
+            $data = data_surat_pengantar_ta();
+            $content = 'disetujui_table.php';
             break;
         case 'disetujui_datamagang':
-            $content = 'disetujui_datamagang.php';
+            $label = 'Surat Keterangan Kerja Praktek/Magang';
+            $data = data_surat_pengantar_kp();
+            $content = 'disetujui_table.php';
             break;
         case 'disetujui_datadispen':
-            $content = 'disetujui_datadispen.php';
+            $label = 'Surat Dispensasi';
+            $data = data_surat_dispensasi();
+            $content = 'disetujui_table.php';
             break;
         case 'disetujui_databeasiswa':
-            $content = 'disetujui_databeasiswa.php';
+            $label = 'Surat Rekomendasi Beasiswa';
+            $data = data_surat_rekomendasi_beasiswa();
+            $content = 'disetujui_table.php';
             break;
         case 'disetujui_databaik':
-            $content = 'disetujui_databaik.php';
+            $label = 'Surat Berkelakuan Baik';
+            $data = data_surat_berkelakuan_baik();
+            $content = 'disetujui_table.php';
             break;
         case 'disetujui_datakompetisi':
-            $content = 'disetujui_datakompetisi.php';
+            $label = 'Surat Tugas Kompetisi';
+            $data = data_surat_tugas_kompetisi();
+            $content = 'disetujui_table.php';
             break;
+
         case 'menunggu':
             $content = 'menunggu.php';
             break;
+
         case 'ditolak':
             $content = 'ditolak.php';
             break;
@@ -111,6 +133,7 @@
 
         // LAYANAN
         case 'surat_sam':
+            $data = data_surat_aktif_mahasiswa(DATA_ID);
             if(isset($_GET['form'])) {
                 $content = 'surat_aktif_mahasiswa.php';
             } else {
