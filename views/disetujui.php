@@ -31,9 +31,11 @@
                                     <h6>0 Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=disetujui_dataktif">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -59,9 +61,11 @@
                                     <h6>0 Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=disetujui_datamatkul">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -87,9 +91,11 @@
                                     <h6>0 Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=disetujui&cat=">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -115,9 +121,11 @@
                                     <h6>0 Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=disetujui&cat=">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -143,9 +151,11 @@
                                     <h6>0 Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=disetujui&cat=">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -171,9 +181,11 @@
                                     <h6>0 Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=disetujui&cat=">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -199,9 +211,11 @@
                                     <h6>0 Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=disetujui&cat=">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -227,9 +241,11 @@
                                     <h6>0 Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=disetujui&cat=">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

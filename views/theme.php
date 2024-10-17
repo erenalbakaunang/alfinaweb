@@ -11,12 +11,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="images/toss.png">
+    <link rel="shortcut icon" href="assets/images/logo-toss.png">
 
-    <link href="https://toss.telkomuniversity.ac.id/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://toss.telkomuniversity.ac.id/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <!-- Responsive datatable examples -->
-    <link href="https://toss.telkomuniversity.ac.id/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/datatables/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/datatables/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
     <!-- App css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -102,21 +101,19 @@
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/plugins/apexcharts/apexcharts.min.js"></script>
 
-    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/dataTables.bootstrap4.min.js"></script>
-    <!-- Buttons examples -->
-    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/dataTables.buttons.min.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/buttons.bootstrap4.min.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/jszip.min.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/pdfmake.min.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/vfs_fonts.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/buttons.html5.min.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/buttons.print.min.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/buttons.colVis.min.js"></script>
+    <script src="assets/plugins/datatables/datatables.min.js"></script>
+    <script src="assets/plugins/datatables/js/dataTables.buttons.min.js"></script>
+    <script src="assets/plugins/datatables/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/plugins/datatables/js/jszip.min.js"></script>
+    <script src="assets/plugins/datatables/js/pdfmake.min.js"></script>
+    <script src="assets/plugins/datatables/js/vfs_fonts.js"></script>
+    <script src="assets/plugins/datatables/js/buttons.html5.min.js"></script>
+    <script src="assets/plugins/datatables/js/buttons.print.min.js"></script>
+    <script src="assets/plugins/datatables/js/buttons.colVis.min.js"></script>
     <!-- Responsive examples -->
-    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/dataTables.responsive.min.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/plugins/datatables/responsive.bootstrap4.min.js"></script>
-    <script src="https://toss.telkomuniversity.ac.id/assets/pages/jquery.datatable.init.js"></script>
+    <script src="assets/plugins/datatables/js/dataTables.responsive.min.js"></script>
+    <script src="assets/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+    <script src="assets/js/jquery.datatable.init.js"></script>
 
     <!-- footerScript -->
     <script>

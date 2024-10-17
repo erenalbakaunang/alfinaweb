@@ -34,27 +34,25 @@
     </div>
 
     <div class="col-lg-4">
-    
-    </div>
-
-    <div class="col-lg-4">
-        
-    </div>
-
-    <div class="col-lg-4">
         <div class="card">
             <div class="card-body">
                 <div class="icon-contain">
                     <div class="row">
                         <div class="col-8 align-self-center">
                             <h5 class="">6</h5>
-                            <p class="text-muted mb-0">Approved</p>
+                            <p class="text-muted mb-0">Disetujui</p>
                         </div>
                         <!--end col-->
                         <div class="col-4">
-                            <i class="mdi mdi-account-check" style="font-size:3em;color:green"></i>
+                            <i class="fa fa-user-check" style="font-size:3em;color:green"></i>
                         </div>
                         <!--end col-->
+
+                        <div class="col-lg-12 text-center">
+                            <a href="?p=disetujui">
+                                <button class="btn btn-danger">&ensp;Lihat&ensp;</button>
+                            </a>
+                        </div>
                     </div>
                     <!--end row-->
                 </div>
@@ -72,13 +70,19 @@
                     <div class="row">
                         <div class="col-8 align-self-center">
                             <h5 class="">0</h5>
-                            <p class="text-muted mb-0">Waiting</p>
+                            <p class="text-muted mb-0">Menunggu</p>
                         </div>
                         <!--end col-->
                         <div class="col-4">
-                            <i class="mdi mdi-account-clock" style="font-size:3em;color:orange"></i>
+                            <i class="fa fa-user-clock" style="font-size:3em;color:orange"></i>
                         </div>
                         <!--end col-->
+
+                        <div class="col-lg-12 text-center">
+                            <a href="?p=menunggu">
+                                <button class="btn btn-danger">&ensp;Lihat&ensp;</button>
+                            </a>
+                        </div>
                     </div>
                     <!--end row-->
                 </div>
@@ -98,13 +102,19 @@
                     <div class="row">
                         <div class="col-8 align-self-center">
                             <h5 class="">0</h5>
-                            <p class="text-muted mb-0">Reject</p>
+                            <p class="text-muted mb-0">Ditolak</p>
                         </div>
                         <!--end col-->
                         <div class="col-4">
-                            <i class="mdi mdi-account-remove" style="font-size:3em;color:red"></i>
+                            <i class="fa fa-user-times" style="font-size:3em;color:red"></i>
                         </div>
                         <!--end col-->
+
+                        <div class="col-lg-12 text-center">
+                            <a href="?p=ditolak">
+                                <button class="btn btn-danger">&ensp;Lihat&ensp;</button>
+                            </a>
+                        </div>
                     </div>
                     <!--end row-->
                 </div>
@@ -126,16 +136,19 @@
                 <div class="icon-contain">
                     <div class="row">
                         <div class="col-8 align-self-center">
-                            <h5 class="">User Guide</h5>
-                            <p class="text-muted mb-0"><a
-                                    href="https://toss.telkomuniversity.ac.id/userguide/GUIDANCE-TOSS-STUDENT-V1.2.pdf">Download</a>
-                            </p>
+                            <h5 class="">Panduan<br>TOSS</h5>
                         </div>
                         <!--end col-->
                         <div class="col-4">
-                            <i class="mdi mdi-file-pdf" style="font-size:3em;color:black"></i>
+                            <i class="fa fa-file-pdf" style="font-size:3em;color:black"></i>
                         </div>
                         <!--end col-->
+
+                        <div class="col-lg-12 text-center">
+                            <a href="">
+                                <button class="btn btn-danger">&ensp;Unduh&ensp;</button>
+                            </a>
+                        </div>
                     </div>
                     <!--end row-->
                 </div>
