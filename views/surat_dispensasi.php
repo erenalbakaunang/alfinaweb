@@ -38,11 +38,18 @@
 
                 <div class="col-sm">
                     <label class="form-label">Bukti</label>
-                    <input type="file" name="bukti" class="form-control" value="<?= $data['bukti']??null ?>"/>
-                    <small>
-                        Silahkan unggah dengan format .jpg/.jpeg/.pdf.<br/>
-                        Ukuran maksimal file 5120 KB.
-                    </small>
+                    <?php if($is_view) { ?>
+                        <button type="button" class="btn btn-danger btn-view-unduh">
+                            <i class="fa fa-download"></i> &nbsp;
+                            Unduh
+                        </button>
+                    <?php } else { ?>
+                        <input type="file" name="bukti" class="form-control" value="<?= $data['bukti']??null ?>"/>
+                        <small>
+                            Silahkan unggah dengan format .jpg/.jpeg/.pdf.<br/>
+                            Ukuran maksimal file 5120 KB.
+                        </small>
+                    <?php } ?>
                 </div>
             </div>
 

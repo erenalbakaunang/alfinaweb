@@ -1,20 +1,4 @@
 <div class="row">
-    <div class="col-lg-12">
-        <div class="page-title-box">
-            <div class="float-right">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="#">Surat Pengantar Kerja Praktek - Magang</a>
-                    </li>
-                    <li class="breadcrumb-item active">Index</li>
-                </ol>
-            </div>
-            <h4 class="page-title">Surat Pengantar Kerja Praktek - Magang</h4>
-        </div>
-    </div>
-</div>
-
-<div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-body">
@@ -37,14 +21,21 @@
                         <tr>
                             <td><?= show_tanggal($dt['Tanggal']) ?></td>
                             <td><?= $dt['nama_perusahaan'] ?></td>
-                            <td><?= $dt['Status'] ?></td>
+                            <td><?= $dt['status'] ?></td>
                             <td>
                                 <a href="?p=surat_kp&form=view&id=<?= $dt['id'] ?>" class="btn btn-info" title="View">
                                     <i class="fa fa-search"></i>
                                 </a>
-                                <a href="#" class="btn btn-success" title="Download">
-                                    <i class="fa fa-file-pdf"></i>
-                                </a>
+                                
+                                <?php if(strtolower($dt['status']) == 'disetujui') { ?>
+                                    <a href="#" class="btn btn-success" onclick="return alert('File berhasil diunduh')" title="Download">
+                                        <i class="fa fa-file-pdf"></i>
+                                    </a>
+                                <?php } else { ?>
+                                    <a href="#" class="btn btn-danger" onclick="return confirm('Apa anda yakin?')" title="Cancel">
+                                        <i class="fa fa-exclamation-triangle"></i>
+                                    </a>
+                                <?php } ?>
                             </td>
                         </tr>
                     <?php } ?>

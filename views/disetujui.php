@@ -21,7 +21,9 @@
                         </div>
 
                         <h6>
-                            <small>Tanggal Update</small><br />
+                            <small>
+                                <?= show_tanggal($last_data_surat_aktif_mahasiswa['Tanggal'] ?? '') ?>
+                            </small><br />
                             Surat Aktif Mahasiswa
                         </h6>
 
@@ -51,7 +53,9 @@
                         </div>
 
                         <h6>
-                            <small>Tanggal Update</small><br />
+                        <small>
+                                <?= show_tanggal($last_data_surat_pengantar_mata_kuliah['Tanggal'] ?? '') ?>
+                            </small><br />
                             Surat Keterangan Mata Kuliah
                         </h6>
 
@@ -81,7 +85,9 @@
                         </div>
 
                         <h6>
-                            <small>Tanggal Update</small><br />
+                        <small>
+                                <?= show_tanggal($last_data_surat_pengantar_ta['Tanggal'] ?? '') ?>
+                            </small><br />
                             Surat Keterangan Penelitian
                         </h6>
 
@@ -111,7 +117,9 @@
                         </div>
 
                         <h6>
-                            <small>Tanggal Update</small><br />
+                        <small>
+                                <?= show_tanggal($last_data_surat_pengantar_kp['Tanggal'] ?? '') ?>
+                            </small><br />
                             Surat Keterangan Kerja Praktek / Magang
                         </h6>
 
@@ -141,7 +149,9 @@
                         </div>
 
                         <h6>
-                            <small>Tanggal Update</small><br />
+                        <small>
+                                <?= show_tanggal($last_data_surat_dispensasi['Tanggal'] ?? '') ?>
+                            </small><br />
                             Surat Dispensasi
                         </h6>
 
@@ -171,7 +181,9 @@
                         </div>
 
                         <h6>
-                            <small>Tanggal Update</small><br />
+                        <small>
+                                <?= show_tanggal($last_data_surat_rekomendasi_beasiswa['Tanggal'] ?? '') ?>
+                            </small><br />
                             Surat Rekomendasi Beasiswa
                         </h6>
 
@@ -201,7 +213,9 @@
                         </div>
 
                         <h6>
-                            <small>Tanggal Update</small><br />
+                        <small>
+                                <?= show_tanggal($last_data_surat_berkelakuan_baik['Tanggal'] ?? '') ?>
+                            </small><br />
                             Surat Berkelakuan Baik
                         </h6>
 
@@ -231,7 +245,9 @@
                         </div>
 
                         <h6>
-                            <small>Tanggal Update</small><br />
+                        <small>
+                                <?= show_tanggal($last_data_surat_tugas_kompetisi['Tanggal'] ?? '') ?>
+                            </small><br />
                             Surat Tugas Kompetisi
                         </h6>
 

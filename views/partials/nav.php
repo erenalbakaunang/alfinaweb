@@ -2,9 +2,7 @@
     <div class="title-box text-center">
         <a class="pp nav-link waves-effect waves-light nav-user" data-toggle="dropdown" href="#" role="button"
             aria-haspopup="false" aria-expanded="false">
-            <img src="https://images.telkomuniversity.ac.id/pmb/2021/PAS_FOTO/11445335820_PAS_FOTO_1.jpg"
-                alt="profile-user" class="rounded-circle wd-30 ht-30" />
-
+            <i class="fa fa-user-circle fa-4x"></i>
         </a>
 
         <h6>

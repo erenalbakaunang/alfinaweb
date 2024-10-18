@@ -46,20 +46,34 @@
             <div class="form-group row">
                 <div class="col-sm">
                     <label class="form-label">Bukti</label>
-                    <input type="file" name="bukti" class="form-control" value="<?= $data['bukti']??null ?>"/>
-                    <small>
-                        Silahkan unggah dengan format .jpg/.jpeg/.pdf (Max. 5MB)<br/>
-                        Poster,surat edaran,dokumen dan 
-                        <u>surat pernyataan pribadi tidak menerima beasiswa</u>
-                    </small>
+                    <?php if($is_view) { ?>
+                        <button type="button" class="btn btn-danger btn-view-unduh">
+                            <i class="fa fa-download"></i> &nbsp;
+                            Unduh
+                        </button>
+                    <?php } else { ?>
+                        <input type="file" name="bukti" class="form-control" value="<?= $data['bukti']??null ?>"/>
+                        <small>
+                            Silahkan unggah dengan format .jpg/.jpeg/.pdf (Max. 5MB)<br/>
+                            Poster,surat edaran,dokumen dan 
+                            <u>surat pernyataan pribadi tidak menerima beasiswa</u>
+                        </small>
+                    <?php } ?>
                 </div>
 
                 <div class="col-sm">
                     <label class="form-label">Format Surat</label>
-                    <input type="file" name="format_surat" class="form-control" value="<?= $data['format_surat']??null ?>"/>
-                    <small>
-                        Please upload in .doc/.docx/.pdf format. Leave blank if no letter format (max. 5MB)
-                    </small>
+                    <?php if($is_view) { ?>
+                        <button type="button" class="btn btn-danger btn-view-unduh">
+                            <i class="fa fa-download"></i> &nbsp;
+                            Unduh
+                        </button>
+                    <?php } else { ?>
+                        <input type="file" name="format_surat" class="form-control" value="<?= $data['format_surat']??null ?>"/>
+                        <small>
+                            Please upload in .doc/.docx/.pdf format. Leave blank if no letter format (max. 5MB)
+                        </small>
+                    <?php } ?>
                 </div>
             </div>
 

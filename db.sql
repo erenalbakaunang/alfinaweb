@@ -67,7 +67,7 @@ CREATE TABLE `surat_aktif_mahasiswa` (
   `Pekerjaan_Ortu` text NOT NULL,
   `Nip_Ortu` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=136 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=137 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -76,7 +76,7 @@ CREATE TABLE `surat_aktif_mahasiswa` (
 
 LOCK TABLES `surat_aktif_mahasiswa` WRITE;
 /*!40000 ALTER TABLE `surat_aktif_mahasiswa` DISABLE KEYS */;
-INSERT INTO `surat_aktif_mahasiswa` VALUES (1,'English','Untuk Beasiswa','Salsabila Kusumaningrum',NULL,'S1 Informatika','PERUMAHAN BUMI PUSPITEK ASRI SEKTOR 4 RW-07 RT-05 BLOK I NOMOR 10 SITUGADUNG PAGEDANGAN','','2024-10-17','pppp','aaa','bbb','ccc'),(2,'Bahasa','Untuk Asuransi Kesehatan ','Salsabila Kusumaningrum','1301184110','S1 Informatika','Bandung','Disetujui','2024-10-17','','Sulistiana','Pegawai Negeri Sipil','1234567'),(3,'Bahasa','Untuk Kehilangan KTM','Salsabila Kusumaningrum','1301184110','S1 Informatika','Bandung','Disetujui','2024-10-17','','Sulistiana','PNS','1234567'),(4,'English','Untuk Visa','Salsabila Kusumaningrum','1301184110','S1 Informatika','Bandung',NULL,'2023-10-01','','Sulistiana','PNS','1234567'),(133,'Bahasa','','Salsabila Kusumaningrum',NULL,'S1 Informatika','PERUMAHAN BUMI PUSPITEK ASRI SEKTOR 4 RW-07 RT-05 BLOK I NOMOR 10 SITUGADUNG PAGEDANGAN','','2024-10-17','','','',''),(134,'Bahasa','Untuk Kebutuhan Orang Tua','Salsabila Kusumaningrum',NULL,'S1 Informatika','PERUMAHAN BUMI PUSPITEK ASRI SEKTOR 4 RW-07 RT-05 BLOK I NOMOR 10 SITUGADUNG PAGEDANGAN','','2024-10-17','','asdsad','',''),(135,'English','Untuk Lomba Nasional','Salsabila Kusumaningrum',NULL,'S1 Informatika','PERUMAHAN BUMI PUSPITEK ASRI SEKTOR 4 RW-07 RT-05 BLOK I NOMOR 10 SITUGADUNG PAGEDANGAN','','2024-10-17','lkookokok','asdsadsad','weqwewqe','tytrytryrt');
+INSERT INTO `surat_aktif_mahasiswa` VALUES (1,'English','Untuk Beasiswa','Salsabila Kusumaningrum',NULL,'S1 Informatika','PERUMAHAN BUMI PUSPITEK ASRI SEKTOR 4 RW-07 RT-05 BLOK I NOMOR 10 SITUGADUNG PAGEDANGAN','Menunggu','2024-10-17','pppp','aaa','bbb','ccc'),(2,'Bahasa','Untuk Asuransi Kesehatan ','Salsabila Kusumaningrum','1301184110','S1 Informatika','Bandung','Disetujui','2024-10-17','','Sulistiana','Pegawai Negeri Sipil','1234567'),(3,'Bahasa','Untuk Kehilangan KTM','Salsabila Kusumaningrum','1301184110','S1 Informatika','Bandung','Ditolak','2024-10-17','','Sulistiana','PNS','1234567');
 /*!40000 ALTER TABLE `surat_aktif_mahasiswa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -96,7 +96,7 @@ CREATE TABLE `surat_berkelakuan_baik` (
   `tujuan` text DEFAULT NULL,
   `deskripsi_tujuan` varchar(45) DEFAULT NULL,
   `Tanggal` date NOT NULL,
-  `Status` varchar(20) NOT NULL,
+  `status` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=134 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -130,7 +130,7 @@ CREATE TABLE `surat_dispensasi` (
   `tanggal_selesai` varchar(45) DEFAULT NULL,
   `link_eksternal` text DEFAULT NULL,
   `Tanggal` date NOT NULL,
-  `Status` varchar(45) NOT NULL,
+  `status` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=133 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -141,7 +141,7 @@ CREATE TABLE `surat_dispensasi` (
 
 LOCK TABLES `surat_dispensasi` WRITE;
 /*!40000 ALTER TABLE `surat_dispensasi` DISABLE KEYS */;
-INSERT INTO `surat_dispensasi` VALUES (130,'Salsabila Kusumaningrum','1301184110','S1 Informatika','Bahasa','Magang','image','10/10/2023','10/11/2023',NULL,'2023-09-15','Disetujui'),(131,'Salsabila Kusumaningrum','1301184110','S1 Informatika','Bahasa','Lomba Hackathon','image','2024-03-19','2024-03-20',NULL,'2024-03-04','Disetujui'),(132,'Salsabila Kusumaningrum','1301184110','S1 Informatika','Bahasa','Lomba Paduan suara ','image','2023-06-25','2023-06-30',NULL,'2023-06-07','Disetujui');
+INSERT INTO `surat_dispensasi` VALUES (130,'Salsabila Kusumaningrum','1301184110','S1 Informatika','Bahasa','Magang','image','10/10/2023','10/11/2023',NULL,'2023-09-15','Disetujui'),(131,'Salsabila Kusumaningrum','1301184110','S1 Informatika','Bahasa','Lomba Hackathon','image','2024-03-19','2024-03-20',NULL,'2024-03-04','Menunggu'),(132,'Salsabila Kusumaningrum','1301184110','S1 Informatika','Bahasa','Lomba Paduan suara ','image','2023-06-25','2023-06-30',NULL,'2023-06-07','Ditolak');
 /*!40000 ALTER TABLE `surat_dispensasi` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -167,7 +167,7 @@ CREATE TABLE `surat_pengantar_kp` (
   `nama_jabatan` varchar(100) DEFAULT NULL,
   `alamat_perusahaan` text DEFAULT NULL,
   `Tanggal` date NOT NULL,
-  `Status` varchar(45) NOT NULL,
+  `status` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=133 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -202,7 +202,7 @@ CREATE TABLE `surat_pengantar_mata_kuliah` (
   `nama_jabatan` varchar(200) DEFAULT NULL,
   `alamat_perusahaan` text DEFAULT NULL,
   `Tanggal` date NOT NULL,
-  `Status` varchar(45) NOT NULL,
+  `status` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=132 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -238,7 +238,7 @@ CREATE TABLE `surat_pengantar_ta` (
   `nama_jabatan` varchar(100) DEFAULT NULL,
   `alamat_perusahaan` text DEFAULT NULL,
   `Tanggal` date NOT NULL,
-  `Status` varchar(45) NOT NULL,
+  `status` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=131 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -271,9 +271,9 @@ CREATE TABLE `surat_rekomendasi_beasiswa` (
   `bukti` text DEFAULT NULL,
   `format_surat` text DEFAULT NULL,
   `Tanggal` date NOT NULL,
-  `Status` varchar(45) NOT NULL,
+  `status` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=133 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=135 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -282,7 +282,7 @@ CREATE TABLE `surat_rekomendasi_beasiswa` (
 
 LOCK TABLES `surat_rekomendasi_beasiswa` WRITE;
 /*!40000 ALTER TABLE `surat_rekomendasi_beasiswa` DISABLE KEYS */;
-INSERT INTO `surat_rekomendasi_beasiswa` VALUES (130,'Salsabila Kusumaningrum','1301184110','S1 Informatika','Bahasa','orc',NULL,'image','file','2022-10-17','Disetujui'),(131,'Salsabila Kusumaningrum','1301184110','S1 Informatika','Bahasa','IDCloudhost',NULL,'image','file','2023-10-17','Disetujui'),(132,'Salsabila Kusumaningrum','1301184110','S1 Informatika','Bahasa','IGGS',NULL,'image','file','2024-10-17','Disetujui');
+INSERT INTO `surat_rekomendasi_beasiswa` VALUES (130,'Salsabila Kusumaningrum','1301184110','S1 Informatika','Bahasa','orc',NULL,'image','file','2022-10-17','Disetujui'),(131,'Salsabila Kusumaningrum','1301184110','S1 Informatika','Bahasa','IDCloudhost',NULL,'image','file','2023-10-17','Disetujui'),(132,'Salsabila Kusumaningrum','1301184110','S1 Informatika','Bahasa','IGGS',NULL,'image','file','2024-10-17','Disetujui'),(134,'Salsabila Kusumaningrum','1301184110','S1 Informatika','Bahasa','Testing','www.msn.com','SBB1729244670.pdf','SRJ1729244667.pdf','2024-10-18','Menunggu');
 /*!40000 ALTER TABLE `surat_rekomendasi_beasiswa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -304,7 +304,7 @@ CREATE TABLE `surat_tugas_kompetisi` (
   `jenis_kompetisi` varchar(100) DEFAULT NULL,
   `url` text DEFAULT NULL,
   `Tanggal` date NOT NULL,
-  `Status` varchar(45) NOT NULL,
+  `status` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=133 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -328,4 +328,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-10-17 20:51:04
+-- Dump completed on 2024-10-18 17:12:18

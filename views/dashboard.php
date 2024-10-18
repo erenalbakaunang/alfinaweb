@@ -164,7 +164,7 @@
 
                                 <div class="col-lg-12 text-center">
                                     <a href="">
-                                        <button class="btn btn-danger">&ensp;Unduh&ensp;</button>
+                                        <button class="btn btn-danger" onclick="return alert('File berhasil diunduh')">&ensp;Unduh&ensp;</button>
                                     </a>
                                 </div>
                             </div>

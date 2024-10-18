@@ -246,7 +246,7 @@ function data_menunggu() {
 
     $sql = $pdo->prepare($query_string);
     $sql->execute([
-        ':status' => ''
+        ':status' => 'menunggu'
     ]);
     $data = $sql->fetchAll(PDO::FETCH_ASSOC);
     
@@ -282,6 +282,126 @@ function data_ditolak() {
     ]);
     $data = $sql->fetchAll(PDO::FETCH_ASSOC);
     
+    return $data;
+}
+function last_data_surat_aktif_mahasiswa($status_data=false) {
+    global $pdo;
+    $sql_string = "SELECT * FROM surat_aktif_mahasiswa";
+    
+    if(!empty($status_data)) {
+        $sql_string .= " WHERE LOWER(status) = '".strtolower($status_data)."'";
+    }
+
+    $sql_string .= " ORDER BY Tanggal DESC LIMIT 0,1";
+
+    $sql = $pdo->query($sql_string);
+    $data = $sql->fetch(PDO::FETCH_ASSOC);
+
+    return $data;
+}
+function last_data_surat_berkelakuan_baik($status_data=false) {
+    global $pdo;
+    $sql_string = "SELECT * FROM surat_berkelakuan_baik";
+    
+    if(!empty($status_data)) {
+        $sql_string .= " WHERE LOWER(status) = '".strtolower($status_data)."'";
+    }
+
+    $sql_string .= " ORDER BY Tanggal DESC LIMIT 0,1";
+
+    $sql = $pdo->query($sql_string);
+    $data = $sql->fetch(PDO::FETCH_ASSOC);
+
+    return $data;
+}
+function last_data_surat_dispensasi($status_data=false) {
+    global $pdo;
+    $sql_string = "SELECT * FROM surat_dispensasi";
+    
+    if(!empty($status_data)) {
+        $sql_string .= " WHERE LOWER(status) = '".strtolower($status_data)."'";
+    }
+
+    $sql_string .= " ORDER BY Tanggal DESC LIMIT 0,1";
+
+    $sql = $pdo->query($sql_string);
+    $data = $sql->fetch(PDO::FETCH_ASSOC);
+
+    return $data;
+}
+function last_data_surat_pengantar_kp($status_data=false) {
+    global $pdo;
+    $sql_string = "SELECT * FROM surat_pengantar_kp";
+    
+    if(!empty($status_data)) {
+        $sql_string .= " WHERE LOWER(status) = '".strtolower($status_data)."'";
+    }
+
+    $sql_string .= " ORDER BY Tanggal DESC LIMIT 0,1";
+
+    $sql = $pdo->query($sql_string);
+    $data = $sql->fetch(PDO::FETCH_ASSOC);
+
+    return $data;
+}
+function last_data_surat_pengantar_mata_kuliah($status_data=false) {
+    global $pdo;
+    $sql_string = "SELECT * FROM surat_pengantar_mata_kuliah";
+    
+    if(!empty($status_data)) {
+        $sql_string .= " WHERE LOWER(status) = '".strtolower($status_data)."'";
+    }
+
+    $sql_string .= " ORDER BY Tanggal DESC LIMIT 0,1";
+
+    $sql = $pdo->query($sql_string);
+    $data = $sql->fetch(PDO::FETCH_ASSOC);
+
+    return $data;
+}
+function last_data_surat_pengantar_ta($status_data=false) {
+    global $pdo;
+    $sql_string = "SELECT * FROM surat_pengantar_ta";
+    
+    if(!empty($status_data)) {
+        $sql_string .= " WHERE LOWER(status) = '".strtolower($status_data)."'";
+    }
+
+    $sql_string .= " ORDER BY Tanggal DESC LIMIT 0,1";
+
+    $sql = $pdo->query($sql_string);
+    $data = $sql->fetch(PDO::FETCH_ASSOC);
+
+    return $data;
+}
+function last_data_surat_rekomendasi_beasiswa($status_data=false) {
+    global $pdo;
+    $sql_string = "SELECT * FROM surat_rekomendasi_beasiswa";
+    
+    if(!empty($status_data)) {
+        $sql_string .= " WHERE LOWER(status) = '".strtolower($status_data)."'";
+    }
+
+    $sql_string .= " ORDER BY Tanggal DESC LIMIT 0,1";
+
+    $sql = $pdo->query($sql_string);
+    $data = $sql->fetch(PDO::FETCH_ASSOC);
+
+    return $data;
+}
+function last_data_surat_tugas_kompetisi($status_data=false) {
+    global $pdo;
+    $sql_string = "SELECT * FROM surat_tugas_kompetisi";
+    
+    if(!empty($status_data)) {
+        $sql_string .= " WHERE LOWER(status) = '".strtolower($status_data)."'";
+    }
+
+    $sql_string .= " ORDER BY Tanggal DESC LIMIT 0,1";
+
+    $sql = $pdo->query($sql_string);
+    $data = $sql->fetch(PDO::FETCH_ASSOC);
+
     return $data;
 }
 ?>
