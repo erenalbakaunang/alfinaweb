@@ -202,58 +202,318 @@ if (!isset($_SESSION['login'])) {
             break;
 
         case 'surat_spmk':
+            $data = data_surat_pengantar_mata_kuliah(DATA_ID);
             if (isset($_GET['form'])) {
+                if(DATA_ID) {
+                    $data = $data[0];
+                }
                 $content = 'surat_pengantar_mata_kuliah.php';
             } else {
                 $content = 'index_surat_pengantar_mata_kuliah.php';
             }
+
+            // start saving data
+            if(!empty($_POST)) {
+                $formData = $_POST;
+                $formData['status'] = '';
+                $formData['Tanggal'] = date('Y-m-d');
+
+                $sql = 'INSERT INTO surat_pengantar_mata_kuliah(
+                        nama, nim, program_studi, bahasa, mata_kuliah, anggota, nama_perusahaan, nama_divisi, nama_jabatan, alamat_perusahaan, Tanggal, status
+                    ) VALUES (
+                        :nama, :nim, :program_studi, :bahasa, :mata_kuliah, :anggota, :nama_perusahaan, :nama_divisi, :nama_jabatan, :alamat_perusahaan, :Tanggal, :status
+                    )';
+        
+                $statement = $pdo->prepare($sql);
+                $result = $statement->execute([
+                    'nama' => $formData['nama'],
+                    'nim' => $formData['nim'],
+                    'program_studi' => $formData['program_studi'],
+                    'bahasa' => $formData['bahasa'],
+                    'mata_kuliah' => $formData['mata_kuliah'],
+                    'anggota' => $formData['anggota'],
+                    'nama_perusahaan' => $formData['nama_perusahaan'],
+                    'nama_divisi' => $formData['nama_divisi'],
+                    'nama_jabatan' => $formData['nama_jabatan'],
+                    'alamat_perusahaan' => $formData['alamat_perusahaan'],
+                    'Tanggal' => $formData['Tanggal'],
+                    'Status' => $formData['Status'],
+                ]);
+
+                if($result) {
+                    header('location: ?p=surat_spmk');
+                }
+                // end saving data
+            }
             break;
 
         case 'surat_spt':
+            $data = data_surat_pengantar_ta(DATA_ID);
             if (isset($_GET['form'])) {
+                if(DATA_ID) {
+                    $data = $data[0];
+                }
                 $content = 'surat_pengantar_ta.php';
             } else {
                 $content = 'index_surat_pengantar_ta.php';
             }
+
+            // start saving data
+            if(!empty($_POST)) {
+                $formData = $_POST;
+                $formData['status'] = '';
+                $formData['Tanggal'] = date('Y-m-d');
+
+                $sql = 'INSERT INTO surat_pengantar_ta(
+                        nama, nim, program_studi, bahasa, tipe_penelitian, topik, anggota, nama_perusahaan, nama_divisi, nama_jabatan, alamat_perusahaan, Tanggal, status
+                    ) VALUES (
+                        :nama, :nim, :program_studi, :bahasa, :tipe_penelitian, :topik, :anggota, :nama_perusahaan, :nama_divisi, :nama_jabatan, :alamat_perusahaan, :Tanggal, :status
+                    )';
+        
+                $statement = $pdo->prepare($sql);
+                $result = $statement->execute([
+                    'nama' => $formData['nama'],
+                    'nim' => $formData['nim'],
+                    'program_studi' => $formData['program_studi'],
+                    'bahasa' => $formData['bahasa'],
+                    'tipe_penelitian' => $formData['tipe_penelitian'],
+                    'topik' => $formData['topik'],
+                    'anggota' => $formData['anggota'],
+                    'nama_perusahaan' => $formData['nama_perusahaan'],
+                    'nama_divisi' => $formData['nama_divisi'],
+                    'nama_jabatan' => $formData['nama_jabatan'],
+                    'alamat_perusahaan' => $formData['alamat_perusahaan'],
+                    'Tanggal' => $formData['Tanggal'],
+                    'Status' => $formData['Status'],
+                ]);
+
+                if($result) {
+                    header('location: ?p=surat_spt');
+                }
+                // end saving data
+            }
             break;
 
         case 'surat_kp':
+            $data = data_surat_pengantar_kp(DATA_ID);
             if (isset($_GET['form'])) {
+                if(DATA_ID) {
+                    $data = $data[0];
+                }
                 $content = 'surat_pengantar_kp.php';
             } else {
                 $content = 'index_surat_pengantar_kp.php';
             }
+
+            // start saving data
+            if(!empty($_POST)) {
+                $formData = $_POST;
+                $formData['status'] = '';
+                $formData['Tanggal'] = date('Y-m-d');
+
+                $sql = 'INSERT INTO surat_pengantar_kp(
+                        nama, nim, program_studi, bahasa, topik, anggota, tanggal_mulai, tanggal_selesai, nama_perusahaan, nama_divisi, nama_jabatan, alamat_perusahaan, Tanggal, status
+                    ) VALUES (
+                        :nama, :nim, :program_studi, :bahasa, :topik, :anggota, :tanggal_mulai, :tanggal_selesai, :nama_perusahaan, :nama_divisi, :nama_jabatan, :alamat_perusahaan, :Tanggal, :status
+                    )';
+        
+                $statement = $pdo->prepare($sql);
+                $result = $statement->execute([
+                    'nama' => $formData['nama'],
+                    'nim' => $formData['nim'],
+                    'program_studi' => $formData['program_studi'],
+                    'bahasa' => $formData['bahasa'],
+                    'topik' => $formData['topik'],
+                    'anggota' => $formData['anggota'],
+                    'tanggal_mulai' => $formData['tanggal_mulai'],
+                    'tanggal_selesai' => $formData['tanggal_selesai'],
+                    'nama_perusahaan' => $formData['nama_perusahaan'],
+                    'nama_divisi' => $formData['nama_divisi'],
+                    'nama_jabatan' => $formData['nama_jabatan'],
+                    'alamat_perusahaan' => $formData['alamat_perusahaan'],
+                    'Tanggal' => $formData['Tanggal'],
+                    'Status' => $formData['Status'],
+                ]);
+
+                if($result) {
+                    header('location: ?p=surat_kp');
+                }
+                // end saving data
+            }
             break;
 
         case 'surat_dispensasi':
+            $data = data_surat_dispensasi(DATA_ID);
             if (isset($_GET['form'])) {
+                if(DATA_ID) {
+                    $data = $data[0];
+                }
                 $content = 'surat_dispensasi.php';
             } else {
                 $content = 'index_surat_dispensasi.php';
             }
+
+            // start saving data
+            if(!empty($_POST)) {
+                $formData = $_POST;
+                $formData['status'] = '';
+                $formData['Tanggal'] = date('Y-m-d');
+
+                $sql = 'INSERT INTO surat_dispensasi(
+                        nama, nim, program_studi, bahasa, tujuan, bukti, tanggal_mulai, tanggal_selesai, link_eksternal, Tanggal, status
+                    ) VALUES (
+                        :nama, :nim, :program_studi, :bahasa, :tujuan, :bukti, :tanggal_mulai, :tanggal_selesai, :link_eksternal, :Tanggal, :status
+                    )';
+        
+                $statement = $pdo->prepare($sql);
+                $result = $statement->execute([
+                    'nama' => $formData['nama'],
+                    'nim' => $formData['nim'],
+                    'program_studi' => $formData['program_studi'],
+                    'bahasa' => $formData['bahasa'],
+                    'tujuan' => $formData['tujuan'],
+                    'bukti' => $formData['bukti'],
+                    'tanggal_mulai' => $formData['tanggal_mulai'],
+                    'tanggal_selesai' => $formData['tanggal_selesai'],
+                    'link_eksternal' => $formData['link_eksternal'],
+                    'Tanggal' => $formData['Tanggal'],
+                    'Status' => $formData['Status'],
+                ]);
+
+                if($result) {
+                    header('location: ?p=surat_dispensasi');
+                }
+                // end saving data
+            }
             break;
 
         case 'surat_rekomendasi_beasiswa':
+            $data = data_surat_rekomendasi_beasiswa(DATA_ID);
             if (isset($_GET['form'])) {
+                if(DATA_ID) {
+                    $data = $data[0];
+                }
                 $content = 'surat_rekomendasi_beasiswa.php';
             } else {
                 $content = 'index_surat_rekomendasi_beasiswa.php';
             }
+
+            // start saving data
+            if(!empty($_POST)) {
+                $formData = $_POST;
+                $formData['status'] = '';
+                $formData['Tanggal'] = date('Y-m-d');
+
+                $sql = 'INSERT INTO surat_rekomendasi_beasiswa(
+                        nama, nim, program_studi, bahasa, nama_beasiswa, link_eksternal, bukti, format_surat, Tanggal, status
+                    ) VALUES (
+                        :nama, :nim, :program_studi, :bahasa, :nama_beasiswa, :link_eksternal, :bukti, :format_surat, :Tanggal, :status
+                    )';
+        
+                $statement = $pdo->prepare($sql);
+                $result = $statement->execute([
+                    'nama' => $formData['nama'],
+                    'nim' => $formData['nim'],
+                    'program_studi' => $formData['program_studi'],
+                    'bahasa' => $formData['bahasa'],
+                    'nama_beasiswa' => $formData['nama_beasiswa'],
+                    'link_eksternal' => $formData['link_eksternal'],
+                    'bukti' => $formData['bukti'],
+                    'format_surat' => $formData['format_surat'],
+                    'Tanggal' => $formData['Tanggal'],
+                    'Status' => $formData['Status'],
+                ]);
+
+                if($result) {
+                    header('location: ?p=surat_rekomendasi_beasiswa');
+                }
+                // end saving data
+            }
             break;
 
         case 'surat_berkelakuan_baik':
+            $data = data_surat_berkelakuan_baik(DATA_ID);
             if (isset($_GET['form'])) {
+                if(DATA_ID) {
+                    $data = $data[0];
+                }
                 $content = 'surat_berkelakuan_baik.php';
             } else {
                 $content = 'index_surat_berkelakuan_baik.php';
             }
+
+            // start saving data
+            if(!empty($_POST)) {
+                $formData = $_POST;
+                $formData['status'] = '';
+                $formData['Tanggal'] = date('Y-m-d');
+
+                $sql = 'INSERT INTO surat_berkelakuan_baik(
+                        nama, nim, program_studi, bahasa, tujuan, deskripsi_tujuan, Tanggal, status
+                    ) VALUES (
+                        :nama, :nim, :program_studi, :bahasa, :tujuan, :deskripsi_tujuan, :Tanggal, :status
+                    )';
+        
+                $statement = $pdo->prepare($sql);
+                $result = $statement->execute([
+                    'nama' => $formData['nama'],
+                    'nim' => $formData['nim'],
+                    'program_studi' => $formData['program_studi'],
+                    'bahasa' => $formData['bahasa'],
+                    'tujuan' => $formData['tujuan'],
+                    'deskripsi_tujuan' => $formData['deskripsi_tujuan'],
+                    'Tanggal' => $formData['Tanggal'],
+                    'Status' => $formData['Status'],
+                ]);
+
+                if($result) {
+                    header('location: ?p=surat_berkelakuan_baik');
+                }
+                // end saving data
+            }
             break;
 
         case 'surat_tugas_kompetisi':
+            $data = data_surat_tugas_kompetisi(DATA_ID);
             if (isset($_GET['form'])) {
+                if(DATA_ID) {
+                    $data = $data[0];
+                }
                 $content = 'surat_tugas_kompetisi.php';
             } else {
                 $content = 'index_surat_tugas_kompetisi.php';
+            }
+
+            // start saving data
+            if(!empty($_POST)) {
+                $formData = $_POST;
+                $formData['status'] = '';
+                $formData['Tanggal'] = date('Y-m-d');
+
+                $sql = 'INSERT INTO surat_tugas_kompetisi(
+                        nama, nim, program_studi, bahasa, Nama_lomba, tanggal_kompetisi, jenis_kompetisi, url, Tanggal, status
+                    ) VALUES (
+                        :nama, :nim, :program_studi, :bahasa, :Nama_lomba, :tanggal_kompetisi, :jenis_kompetisi, :url, :Tanggal, :status
+                    )';
+        
+                $statement = $pdo->prepare($sql);
+                $result = $statement->execute([
+                    'nama' => $formData['nama'],
+                    'nim' => $formData['nim'],
+                    'program_studi' => $formData['program_studi'],
+                    'bahasa' => $formData['bahasa'],
+                    'Nama_lomba' => $formData['Nama_lomba'],
+                    'tanggal_kompetisi' => $formData['tanggal_kompetisi'],
+                    'jenis_kompetisi' => $formData['jenis_kompetisi'],
+                    'url' => $formData['url'],
+                    'Tanggal' => $formData['Tanggal'],
+                    'Status' => $formData['Status'],
+                ]);
+
+                if($result) {
+                    header('location: ?p=surat_tugas_kompetisi');
+                }
+                // end saving data
             }
             break;
 

@@ -44,7 +44,7 @@
 
                 <div class="col-sm">
                 <label class="form-label">NIM</label>
-                    <input type="text" name="num" class="form-control" value="<?= $loginData['nim'] ?>" readonly />
+                    <input type="text" name="nim" class="form-control" value="<?= $loginData['nim'] ?>" readonly />
                 </div>
 
                 <div class="col-sm">

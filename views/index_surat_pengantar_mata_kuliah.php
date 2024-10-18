@@ -28,21 +28,18 @@
                 <table id="datatable" class="table table-striped table-bordered table-hover nowrap" style="width:100%">
                     <thead>
                         <th>Tanggal Pengajuan</th>
-                        <th>Tujuan</th>
+                        <th>Matakuliah</th>
                         <th>Status</th>
                         <th>Aksi</th>
                     </thead>
                     <tbody>
+                    <?php foreach($data as $key => $dt) { ?>
                         <tr>
-                            <td>23 April 2024</td>
-                            <td>For Health Insurance</td>
+                            <td><?= show_tanggal($dt['Tanggal']) ?></td>
+                            <td><?= $dt['mata_kuliah'] ?></td>
+                            <td><?= $dt['Status'] ?></td>
                             <td>
-                                <span class="text-success">
-                                    Approved
-                                </span>
-                            </td>
-                            <td>
-                                <a href="?p=surat_spmk&form=view" class="btn btn-info" title="View">
+                                <a href="?p=surat_spmk&form=view&id=<?= $dt['id'] ?>" class="btn btn-info" title="View">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <a href="#" class="btn btn-success" title="Download">
@@ -50,40 +47,7 @@
                                 </a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>23 August 2024</td>
-                            <td>For Health Insurance</td>
-                            <td>
-                                <span class="text-success">
-                                    Approved
-                                </span>
-                            </td>
-                            <td>
-                                <a href="?p=surat_spmk&form=view" class="btn btn-info" title="View">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                                <a href="#" class="btn btn-success" title="Download">
-                                    <i class="fa fa-file-pdf"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>17 September 2024</td>
-                            <td>For Visa</td>
-                            <td>
-                                <span class="text-success">
-                                    Approved
-                                </span>
-                            </td>
-                            <td>
-                                <a href="?p=surat_spmk&form=view" class="btn btn-info" title="View">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                                <a href="#" class="btn btn-success" title="Download">
-                                    <i class="fa fa-file-pdf"></i>
-                                </a>
-                            </td>
-                        </tr>
+                    <?php } ?>
                     </tbody>
                 </table>
             </div>

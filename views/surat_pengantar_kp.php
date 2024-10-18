@@ -8,32 +8,32 @@
             <div class="form-group row">
                 <div class="col-sm">
                     <label class="form-label">Nama</label>
-                    <input type="text" class="form-control" value="Alfina Rahmawati" disabled />
+                    <input type="text" name="nama" class="form-control" value="<?= $loginData['nama'] ?>" readonly />
                 </div>
 
                 <div class="col-sm">
                 <label class="form-label">NIM</label>
-                    <input type="text" class="form-control" value="1301204382" disabled />
+                    <input type="text" name="nim" class="form-control" value="<?= $loginData['nim'] ?>" readonly />
                 </div>
 
                 <div class="col-sm">
                     <label class="form-label">Program Studi</label>
-                    <input type="text" class="form-control" value="S1 Informatika" disabled />
+                    <input type="text" name="program_studi" class="form-control" value="<?= $loginData['program_studi'] ?>" readonly />
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-sm">
                     <label class="form-label">Bahasa Dokumen</label>
-                    <select class="form-control">
-                        <option>English</option>
-                        <option>Indonesia</option>
+                    <select name="bahasa" class="form-control" data-selected="<?= $data['bahasa']??null ?>">
+                        <option value="Bahasa">Bahasa</option>
+                        <option value="English">English</option>
                     </select>
                 </div>
 
                 <div class="col-sm">
                     <label class="form-label">Topik</label>
-                    <input type="text" class="form-control" />
+                    <input type="text" name="topik" class="form-control" value="<?= $data['topik']??null ?>"/>
                 </div>
 
                 <div class="col-sm"></div>
@@ -42,10 +42,10 @@
             <div class="form-group row">
                 <div class="col-sm">
                     <label class="form-label">Anggota</label>
-                    <select class="form-control">
-                        <option disabled selected></option>
-                        <option>Untuk Asuransi Kesehatan</option>
-                        <option>Untuk Visa</option>
+                    <select name="anggota" class="form-control" data-selected="<?= $data['anggota']??null ?>">
+                        <option></option>
+                        <option value="Untuk Asuransi Kesehatan">Untuk Asuransi Kesehatan</option>
+                        <option value="Untuk Visa">Untuk Visa</option>
                     </select>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                 <div class="col-sm">
                     <label class="form-label">Tanggal Mulai</label>
                     <div class="input-group">
-                        <input type="text" class="form-control datepicker" />
+                        <input type="text" name="tanggal_mulai" class="form-control datepicker" value="<?= $data['tanggal_mulai']??null ?>"/>
                         <span class="input-group-text dpspan">
                             <i class="fa fa-calendar"></i>
                         </span>
@@ -64,7 +64,7 @@
                 <div class="col-sm">
                     <label class="form-label">Tanggal Selesai</label>
                     <div class="input-group">
-                        <input type="text" class="form-control datepicker" />
+                        <input type="text" name="tanggal_selesai" class="form-control datepicker" value="<?= $data['tanggal_selesai']??null ?>"/>
                         <span class="input-group-text dpspan">
                             <i class="fa fa-calendar"></i>
                         </span>
@@ -77,18 +77,18 @@
             <div class="form-group row">
                 <div class="col-sm">
                     <label class="form-label">Nama Perusahaan</label>
-                    <input type="text" class="form-control" />
+                    <input type="text" name="nama_perusahaan" class="form-control" value="<?= $data['nama_perusahaan']??null ?>"/>
                 </div>
 
                 <div class="col-sm">
                     <label class="form-label">Nama Divisi</label>
-                    <input type="text" class="form-control" />
+                    <input type="text" name="nama_divisi" class="form-control" value="<?= $data['nama_divisi']??null ?>"/>
                     <small>Contoh: Divisi SDM</small>
                 </div>
 
                 <div class="col-sm">
                     <label class="form-label">Nama Jabatan</label>
-                    <input type="text" class="form-control" />
+                    <input type="text" name="nama_jabatan" class="form-control" value="<?= $data['nama_jabatan']??null ?>"/>
                     <small>Contoh: Manager</small>
                 </div>
             </div>
@@ -96,7 +96,7 @@
             <div class="form-group row">
                 <div class="col-sm">
                     <label class="form-label">Alamat Perusahaan</label>
-                    <textarea class="form-control"></textarea>
+                    <input name="alamat_perusahaan" class="form-control" value="<?= $data['alamat_perusahaan']??null ?>"></input>
                 </div>
             </div>
 

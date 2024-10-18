@@ -8,24 +8,24 @@
             <div class="form-group row">
                 <div class="col-sm">
                     <label class="form-label">Nama</label>
-                    <input type="text" class="form-control" value="Alfina Rahmawati" disabled />
+                    <input type="text" name="nama" class="form-control" value="<?= $loginData['nama'] ?>" readonly />
                 </div>
 
                 <div class="col-sm">
                 <label class="form-label">NIM</label>
-                    <input type="text" class="form-control" value="1301204382" disabled />
+                    <input type="text" name="nim" class="form-control" value="<?= $loginData['nim'] ?>" readonly />
                 </div>
 
                 <div class="col-sm">
                     <label class="form-label">Program Studi</label>
-                    <input type="text" class="form-control" value="S1 Informatika" disabled />
+                    <input type="text" name="program_studi" class="form-control" value="<?= $loginData['program_studi'] ?>" readonly />
                 </div>
             </div>
 
             <div class="form-group row">
                 <div class="col-sm">
                     <label class="form-label">Bahasa Dokumen</label>
-                    <select class="form-control">
+                    <select name="bahasa" class="form-control" data-selected="<?= $data['bahasa']??null ?>">
                         <option>English</option>
                         <option>Indonesia</option>
                     </select>
@@ -33,12 +33,12 @@
 
                 <div class="col-sm">
                     <label class="form-label">Tujuan</label>
-                    <input type="text" class="form-control" />
+                    <input type="text" name="tujuan" class="form-control" value="<?= $data['tujuan']??null ?>"/>
                 </div>
 
                 <div class="col-sm">
                     <label class="form-label">Bukti</label>
-                    <input type="file" class="form-control" />
+                    <input type="file" name="bukti" class="form-control" value="<?= $data['bukti']??null ?>"/>
                     <small>
                         Silahkan unggah dengan format .jpg/.jpeg/.pdf.<br/>
                         Ukuran maksimal file 5120 KB.
@@ -50,7 +50,7 @@
                 <div class="col-sm">
                     <label class="form-label">Tanggal Mulai</label>
                     <div class="input-group">
-                        <input type="text" class="form-control datepicker" />
+                        <input type="text" name="tanggal_mulai" class="form-control datepicker" value="<?= $data['tanggal_mulai']??null ?>"/>
                         <span class="input-group-text dpspan">
                             <i class="fa fa-calendar"></i>
                         </span>
@@ -60,7 +60,7 @@
                 <div class="col-sm">
                     <label class="form-label">Tanggal Selesai</label>
                     <div class="input-group">
-                        <input type="text" class="form-control datepicker" />
+                        <input type="text" name="tanggal_selesai" class="form-control datepicker" value="<?= $data['tanggal_selesai']??null ?>"/>
                         <span class="input-group-text dpspan">
                             <i class="fa fa-calendar"></i>
                         </span>
@@ -69,7 +69,7 @@
 
                 <div class="col-sm">
                     <label class="form-label">Link Eksternal</label>
-                    <input type="text" class="form-control" />
+                    <input type="text" name="link_eksternal" class="form-control" value="<?= $data['link_eksternal']??null ?>"/>
                 </div>
             </div>
 
