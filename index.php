@@ -20,13 +20,25 @@ if (!isset($_SESSION['login'])) {
     define('PARAM', $_GET['p'] ?? '');
     define('DATA_ID', $_GET['id'] ?? '');
 
+    $keyword = false;
+    $pencarian_result = [];
+    $content = 'dashboard.php';
     $loginData = $_SESSION['login'];
+
+    $dataDisetujui = data_disetujui();
+    $dataMenunggu = data_menunggu();
+    $dataDitolak = data_ditolak();
 
     switch (PARAM):
         case 'logout':
             unset($_SESSION['login']);
             header('location:/');
             exit;
+            break;
+
+        case 'pencarian':
+            $keyword = $_POST['keyword'] ?? '';
+            $pencarian_result = data_pencarian($keyword);
             break;
 
         case 'disetujui':
@@ -57,48 +69,128 @@ if (!isset($_SESSION['login'])) {
             $content = 'disetujui_detailkompetisi.php';
             break;
 
-        case 'disetujui_dataktif':
+        case 'disetujui_dataaktif':
+        case 'ditolak_dataaktif':
+            $label_status = 'Disetujui';
+            if(PARAM == 'ditolak_dataaktif') {
+                $label_status = 'Ditolak';
+            }
+
+            $slug = 'surat_sam';
+            $column = ['tujuan', 'Tujuan'];
+            $data = data_surat_aktif_mahasiswa(null, $label_status);
+
             $label = 'Surat Aktif Mahasiswa';
-            $data = data_surat_aktif_mahasiswa();
-            $content = 'disetujui_table.php';
+            $content = 'disetujui_ditolak_table.php';
             break;
+            
         case 'disetujui_datamatkul':
+        case 'ditolak_datamatkul':
+            $label_status = 'Disetujui';
+            if(PARAM == 'ditolak_datamatkul') {
+                $label_status = 'Ditolak';
+            }
+
+            $slug = 'surat_spmk';
+            $column = ['mata_kuliah', 'Mata Kuliah'];
+            $data = data_surat_pengantar_mata_kuliah(null, $label_status);
+
             $label = 'Surat Keterangan Mata Kuliah';
-            $data = data_surat_pengantar_mata_kuliah();
-            $content = 'disetujui_table.php';
+            $content = 'disetujui_ditolak_table.php';
             break;
+
         case 'disetujui_datapenelitian':
+        case 'ditolak_datapenelitian':
+            $label_status = 'Disetujui';
+            if(PARAM == 'ditolak_datapenelitian') {
+                $label_status = 'Ditolak';
+            }
+
+            $slug = 'surat_spt';
+            $column = ['tipe_penelitian', 'Tipe Penelitian'];
+            $data = data_surat_pengantar_ta(null, $label_status);
+
             $label = 'Surat Keterangan Penelitian';
-            $data = data_surat_pengantar_ta();
-            $content = 'disetujui_table.php';
+            $content = 'disetujui_ditolak_table.php';
             break;
+
         case 'disetujui_datamagang':
+        case 'ditolak_datamagang':
+            $label_status = 'Disetujui';
+            if(PARAM == 'ditolak_datamagang') {
+                $label_status = 'Ditolak';
+            }
+
+            $slug = 'surat_pengantar_kp';
+            $column = ['nama_perusahaan', 'Nama Perusahaan'];
+            $data = data_surat_pengantar_kp(null, $label_status);
+
             $label = 'Surat Keterangan Kerja Praktek/Magang';
-            $data = data_surat_pengantar_kp();
-            $content = 'disetujui_table.php';
+            $content = 'disetujui_ditolak_table.php';
             break;
+
         case 'disetujui_datadispen':
+        case 'ditolak_datadispen':
+            $label_status = 'Disetujui';
+            if(PARAM == 'ditolak_datadispen') {
+                $label_status = 'Ditolak';
+            }
+
+            $slug = 'surat_dispensasi';
+            $column = ['tujuan', 'Tujuan'];
+            $data = data_surat_dispensasi(null, $label_status);
+
             $label = 'Surat Dispensasi';
-            $data = data_surat_dispensasi();
-            $content = 'disetujui_table.php';
+            $content = 'disetujui_ditolak_table.php';
             break;
+
         case 'disetujui_databeasiswa':
+        case 'ditolak_databeasiswa':
+            $label_status = 'Disetujui';
+            if(PARAM == 'ditolak_databeasiswa') {
+                $label_status = 'Ditolak';
+            }
+
+            $slug = 'surat_rekomendasi_beasiswa';
+            $column = ['nama_beasiswa', 'Nama Beasiswa'];
+            $data = data_surat_rekomendasi_beasiswa(null, $label_status);
+
             $label = 'Surat Rekomendasi Beasiswa';
-            $data = data_surat_rekomendasi_beasiswa();
-            $content = 'disetujui_table.php';
+            $content = 'disetujui_ditolak_table.php';
             break;
+
         case 'disetujui_databaik':
+        case 'ditolak_databaik':
+            $label_status = 'Disetujui';
+            if(PARAM == 'ditolak_databaik') {
+                $label_status = 'Ditolak';
+            }
+
+            $slug = 'surat_berkelakuan_baik';
+            $column = ['tujuan', 'Tujuan'];
+            $data = data_surat_berkelakuan_baik(null, $label_status);
+
             $label = 'Surat Berkelakuan Baik';
-            $data = data_surat_berkelakuan_baik();
-            $content = 'disetujui_table.php';
+            $content = 'disetujui_ditolak_table.php';
             break;
+
         case 'disetujui_datakompetisi':
+        case 'ditolak_datakompetisi':
+            $label_status = 'Disetujui';
+            if(PARAM == 'ditolak_datakompetisi') {
+                $label_status = 'Ditolak';
+            }
+
+            $slug = 'surat_tugas_kompetisi';
+            $column = ['Nama_lomba', 'Nama Lomba'];
+            $data = data_surat_tugas_kompetisi(null, $label_status);
+
             $label = 'Surat Tugas Kompetisi';
-            $data = data_surat_tugas_kompetisi();
-            $content = 'disetujui_table.php';
+            $content = 'disetujui_ditolak_table.php';
             break;
 
         case 'menunggu':
+            $data = data_menunggu();
             $content = 'menunggu.php';
             break;
 
@@ -129,9 +221,10 @@ if (!isset($_SESSION['login'])) {
         case 'ditolak_detailkompetisi':
             $content = 'ditolak_detailkompetisi.php';
             break;
-        case 'ditolak_dataktif':
-            $content = 'ditolak_dataktif.php';
-            break;
+
+        // case 'ditolak_dataktif':
+        //     $content = 'ditolak_dataktif.php';
+        //     break;
         case 'ditolak_datamatkul':
             $content = 'ditolak_datamatkul.php';
             break;
@@ -517,10 +610,9 @@ if (!isset($_SESSION['login'])) {
             }
             break;
 
+        // Showing dashboard page
+        default: break;
 
-        default:
-            $content = 'dashboard.php';
-            break;
     endswitch;
 
     require('views/theme.php');

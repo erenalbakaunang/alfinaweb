@@ -1,6 +1,6 @@
 <div class="row row-detail-page">
     <div class="col-lg-1 left-back-link">
-        <a href="">
+        <a href="/">
             <i class="fa fa-arrow-left"></i>
         </a>
     </div>
@@ -28,12 +28,14 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_aktif_mahasiswa(null, 'ditolak')) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=ditolak_dataaktif">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -56,12 +58,14 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_pengantar_mata_kuliah(null, 'ditolak')) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=ditolak_datamatkul">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -84,12 +88,14 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_pengantar_ta(null, 'ditolak')) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=ditolak_datapenelitian">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -112,12 +118,14 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_pengantar_kp(null, 'ditolak')) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=ditolak_datamagang">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -140,12 +148,14 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_dispensasi(null, 'ditolak')) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=ditolak_datadispen">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -168,12 +178,14 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_rekomendasi_beasiswa(null, 'ditolak')) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=ditolak_databeasiswa">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -196,12 +208,14 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_berkelakuan_baik(null, 'ditolak')) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=ditolak_databaik">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -224,12 +238,14 @@
                         <div class="container" style="padding-top:15px">
                             <div class="row">
                                 <div class="col">
-                                    <h6>0 Surat</h6>
+                                    <h6><?= count(data_surat_tugas_kompetisi(null, 'ditolak')) ?> Surat</h6>
                                 </div>
                                 <div class="col text-right">
-                                    <button class="btn btn-danger">
-                                        Lihat
-                                    </button>
+                                    <a href="?p=ditolak_datakompetisi">
+                                        <button class="btn btn-danger">
+                                            Lihat
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -5,7 +5,7 @@
  */
 
 $(document).ready(function () {
-    $("#datatable").DataTable({
+    var thisDatatable = $("#datatable").DataTable({
         scrollX: true,
     });
 
@@ -32,6 +32,25 @@ $(document).ready(function () {
                 $("td", row).eq(5).addClass("highlight");
             }
         },
+    });
+
+    let showLacakData = function(d){
+        return 'lorem ipsum';
+    }
+
+    // Add event listener for opening and closing details
+    thisDatatable.on('click', 'a.dt-control', function (e) {
+        let tr = e.target.closest('tr');
+        let row = thisDatatable.row(tr);
+    
+        if (row.child.isShown()) {
+            // This row is already open - close it
+            row.child.hide();
+        }
+        else {
+            // Open this row
+            row.child(showLacakData(row.data())).show();
+        }
     });
 });
 

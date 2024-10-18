@@ -48,39 +48,6 @@
         </div>
     </div>
 
-    <div class="row mt-3">
-        <div class="col-lg-12">
-            <div class="card">
-                <div class="card-body">
-                    <div class="input-group">
-                        <input class="form-control search border-end-0 border"
-                            placeholder="What letter would you want to create today?" id="keyword" name="search"
-                            type="text" value="">
-                        <span class="input-group-append">
-                            <button class="btn btn-outline-secondary bg-white border-start-0 border ms-n3" type="button"
-                                id="search">
-                                <i class="mdi mdi-magnify text-muted"></i>
-                            </button>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12" id="result">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="header-title">Search Result</h4>
-                    <hr>
-                    <div class="result"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- extra Modal -->
-
-
     <!-- Footer -->
     <footer class="footer text-center text-sm-left">
         &copy; 2024 Telkom University <span class="text-muted d-none d-sm-inline-block float-right">Crafted with <i
