@@ -27,18 +27,25 @@
                         <th>Aksi</th>
                     </thead>
                     <tbody>
-                        <?php foreach($data as $key => $dt) { ?>
+                        <?php foreach ($data as $key => $dt) { ?>
                             <tr>
                                 <td><?= $dt['nama'] ?></td>
                                 <td><?= $dt[$column[0]] ?></td>
                                 <td>
-                                    <a href="?p=<?= $slug ?>&form=view&id=<?= $dt['id'] ?>" class="btn btn-info" title="View">
+                                    <a href="?p=<?= $slug ?>&form=view&id=<?= $dt['id'] ?>" class="btn btn-info"
+                                        title="View">
                                         <i class="fa fa-search"></i>
                                     </a>
 
-                                    <?php if(strtolower($label_status) == 'disetuju') { ?>
-                                        <a href="#" class="btn btn-success" title="Download">
+                                    <?php if (strtolower($label_status) == 'disetujui') { ?>
+                                        <a href="#" class="btn btn-success" onclick="return alert('File berhasil diunduh')"
+                                            title="Download">
                                             <i class="fa fa-file-pdf"></i>
+                                        </a>
+                                    <?php } else { ?>
+                                        <a href="#" class="btn btn-danger" onclick="return confirm('Apa anda yakin?')"
+                                            title="Cancel">
+                                            <i class="fa fa-exclamation-triangle"></i>
                                         </a>
                                     <?php } ?>
                                 </td>

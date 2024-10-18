@@ -22,7 +22,7 @@
 
                         <h6>
                             <small>
-                                <?= show_tanggal($data_surat_aktif_mahasiswa['Tanggal'] ?? '') ?>
+                                <?= show_tanggal($last_data_surat_aktif_mahasiswa['Tanggal'] ?? '') ?>
                             </small><br />
                             Surat Aktif Mahasiswa
                         </h6>
@@ -54,7 +54,7 @@
 
                         <h6>
                             <small>
-                                <?= show_tanggal($data_surat_pengantar_mata_kuliah['Tanggal'] ?? '') ?>
+                                <?= show_tanggal($last_data_surat_pengantar_mata_kuliah['Tanggal'] ?? '') ?>
                             </small><br />
                             Surat Keterangan Mata Kuliah
                         </h6>
@@ -86,7 +86,7 @@
 
                         <h6>
                             <small>
-                                <?= show_tanggal($data_surat_pengantar_ta['Tanggal'] ?? '') ?>
+                                <?= show_tanggal($last_data_surat_pengantar_ta['Tanggal'] ?? '') ?>
                             </small><br />
                             Surat Keterangan Penelitian
                         </h6>
@@ -118,7 +118,7 @@
 
                         <h6>
                             <small>
-                                <?= show_tanggal($data_surat_pengantar_kp['Tanggal'] ?? '') ?>
+                                <?= show_tanggal($last_data_surat_pengantar_kp['Tanggal'] ?? '') ?>
                             </small><br />
                             Surat Keterangan Kerja Praktek / Magang
                         </h6>
@@ -150,7 +150,7 @@
 
                         <h6>
                             <small>
-                                <?= show_tanggal($data_surat_dispensasi['Tanggal'] ?? '') ?>
+                                <?= show_tanggal($last_data_surat_dispensasi['Tanggal'] ?? '') ?>
                             </small><br />
                             Surat Dispensasi
                         </h6>
@@ -182,7 +182,7 @@
 
                         <h6>
                             <small>
-                                <?= show_tanggal($data_surat_rekomendasi_beasiswa['Tanggal'] ?? '') ?>
+                                <?= show_tanggal($last_data_surat_rekomendasi_beasiswa['Tanggal'] ?? '') ?>
                             </small><br />
                             Surat Rekomendasi Beasiswa
                         </h6>
@@ -214,7 +214,7 @@
 
                         <h6>
                             <small>
-                                <?= show_tanggal($data_surat_berkelakuan_baik['Tanggal'] ?? '') ?>
+                                <?= show_tanggal($last_data_surat_berkelakuan_baik['Tanggal'] ?? '') ?>
                             </small><br />
                             Surat Berkelakuan Baik
                         </h6>
