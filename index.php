@@ -107,10 +107,10 @@ if (!isset($_SESSION['login'])) {
             }
 
             $slug = 'surat_spmk';
-            $column = ['mata_kuliah', 'Mata Kuliah'];
+            $column = ['mata_kuliah', lang('Mata Kuliah')];
             $data = data_surat_pengantar_mata_kuliah(null, $label_status);
 
-            $label = 'Surat Keterangan Mata Kuliah';
+            $label = lang('Surat Keterangan Mata Kuliah');
             $content = 'category_table_page.php';
             break;
 
@@ -125,10 +125,10 @@ if (!isset($_SESSION['login'])) {
             }
 
             $slug = 'surat_spt';
-            $column = ['tipe_penelitian', 'Tipe Penelitian'];
+            $column = ['tipe_penelitian', lang('Tipe Penelitian')];
             $data = data_surat_pengantar_ta(null, $label_status);
 
-            $label = 'Surat Keterangan Penelitian';
+            $label = lang('Surat Keterangan Penelitian');
             $content = 'category_table_page.php';
             break;
 
@@ -143,10 +143,10 @@ if (!isset($_SESSION['login'])) {
             }
 
             $slug = 'surat_pengantar_kp';
-            $column = ['nama_perusahaan', 'Nama Perusahaan'];
+            $column = ['nama_perusahaan', lang('Nama Perusahaan')];
             $data = data_surat_pengantar_kp(null, $label_status);
 
-            $label = 'Surat Keterangan Kerja Praktek/Magang';
+            $label = lang('Surat Keterangan Kerja Praktek/Magang');
             $content = 'category_table_page.php';
             break;
 
@@ -161,10 +161,10 @@ if (!isset($_SESSION['login'])) {
             }
 
             $slug = 'surat_dispensasi';
-            $column = ['tujuan', 'Tujuan'];
+            $column = ['tujuan', lang('Tujuan')];
             $data = data_surat_dispensasi(null, $label_status);
 
-            $label = 'Surat Dispensasi';
+            $label = lang('Surat Dispensasi');
             $content = 'category_table_page.php';
             break;
 
@@ -179,10 +179,10 @@ if (!isset($_SESSION['login'])) {
             }
 
             $slug = 'surat_rekomendasi_beasiswa';
-            $column = ['nama_beasiswa', 'Nama Beasiswa'];
+            $column = ['nama_beasiswa', lang('Nama Beasiswa')];
             $data = data_surat_rekomendasi_beasiswa(null, $label_status);
 
-            $label = 'Surat Rekomendasi Beasiswa';
+            $label = lang('Surat Rekomendasi Beasiswa');
             $content = 'category_table_page.php';
             break;
 
@@ -197,10 +197,10 @@ if (!isset($_SESSION['login'])) {
             }
 
             $slug = 'surat_berkelakuan_baik';
-            $column = ['tujuan', 'Tujuan'];
+            $column = ['tujuan', lang('Tujuan')];
             $data = data_surat_berkelakuan_baik(null, $label_status);
 
-            $label = 'Surat Berkelakuan Baik';
+            $label = lang('Surat Berkelakuan Baik');
             $content = 'category_table_page.php';
             break;
 
@@ -215,10 +215,10 @@ if (!isset($_SESSION['login'])) {
             }
 
             $slug = 'surat_tugas_kompetisi';
-            $column = ['Nama_lomba', 'Nama Lomba'];
+            $column = ['Nama_lomba', lang('Nama Lomba')];
             $data = data_surat_tugas_kompetisi(null, $label_status);
 
-            $label = 'Surat Tugas Kompetisi';
+            $label = lang('Surat Tugas Kompetisi');
             $content = 'category_table_page.php';
             break;
 

@@ -19,7 +19,7 @@
                 <li class="nav-item">
                     <a class="nav-link " href="/">
                         <i class="fa fa-desktop"></i>
-                        Beranda
+                        <?= lang ('Beranda') ?>
                     </a>
                 </li>
 
@@ -27,7 +27,7 @@
                     <a class="nav-link" href="javascript: void(0);">
                         <i class="fa fa-user-graduate"></i>
                         <span class="w-100">
-                            Layanan
+                        <?= lang ('Layanan') ?>
                         </span>
                         <span class="menu-arrow">
                             <i class="fa fa-chevron-right"></i>
@@ -37,13 +37,13 @@
                     <ul class="nav-second-level pl-1" aria-expanded="false">
                         <li class="nav-item">
                             <a class="nav-link " href="?p=surat_sam">
-                                Surat Aktif Mahasiswa
+                            <?= lang ('Surat Aktif Mahasiswa') ?>
                             </a>
                         </li>
                         <li class="nav-item mt-0 theParent">
                             <a class="nav-link" href="javascript: void(0);">
                                 <span class="w-100">
-                                    Surat Keterangan
+                                <?= lang ('Surat Keterangan') ?>
                                 </span>
                                 <span class="menu-arrow">
                                     <i class="fa fa-chevron-right"></i>
@@ -51,30 +51,30 @@
                             </a>
 
                             <ul class="nav-second-level" aria-expanded="false">
-                                <li class=""><a href="?p=surat_spmk">Untuk Matakuliah</a></li>
-                                <li class=""><a href="?p=surat_spt">Untuk Penelitian</a></li>
-                                <li class=""><a href="?p=surat_kp">Untuk Kerja Praktek/Magang</a>
+                                <li class=""><a href="?p=surat_spmk"><?= lang ('Untuk Matakuliah') ?></a></li>
+                                <li class=""><a href="?p=surat_spt"><?= lang ('Untuk Penelitian') ?></a></li>
+                                <li class=""><a href="?p=surat_kp"><?= lang ('Untuk Kerja Praktek/Magang') ?></a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item my-4 ">
                             <a class="nav-link" href="?p=surat_dispensasi">
-                                Surat Dispensasi
+                            <?= lang ('Surat Dispensasi') ?>
                             </a>
                         </li>
                         <li class="nav-item my-4 ">
                             <a class="nav-link" href="?p=surat_rekomendasi_beasiswa">
-                                Surat Rekomendasi Beasiswa
+                            <?= lang ('Surat Rekomendasi Beasiswa') ?>
                             </a>
                         </li>
                         <li class="nav-item my-4 ">
                             <a class="nav-link" href="?p=surat_berkelakuan_baik">
-                                Surat Berkelakuan Baik
+                            <?= lang ('Surat Berkelakuan Baik') ?>
                             </a>
                         </li>
                         <li class="nav-item my-4 ">
                             <a class="nav-link" href="?p=surat_tugas_kompetisi">
-                                Surat Tugas Kompetisi
+                            <?= lang ('Surat Tugas Kompetisi') ?>
                             </a>
                         </li>
                     </ul>

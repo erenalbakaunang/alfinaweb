@@ -5,16 +5,16 @@
                 <div class="mt-0 header-title mb-4">
                     <a class="btn btn-primary waves-effect waves-light" href="?p=surat_spmk&form"><i
                             class="fas fa-plus"></i>
-                        Ajukan Surat
+                            <?= lang ('Ajukan Surat') ?>
                     </a>
                 </div>
                 <hr>
                 <table id="datatable" class="table table-striped table-bordered table-hover nowrap" style="width:100%">
                     <thead>
-                        <th>Tanggal Pengajuan</th>
-                        <th>Matakuliah</th>
-                        <th>Status</th>
-                        <th>Aksi</th>
+                        <th><?= lang ('Tanggal Pengajuan') ?></th>
+                        <th><?= lang ('Matakuliah') ?></th>
+                        <th><?= lang ('Status') ?></th>
+                        <th><?= lang ('Aksi') ?></th>
                     </thead>
                     <tbody>
                     <?php foreach($data as $key => $dt) { ?>

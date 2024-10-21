@@ -8,7 +8,7 @@
     <div class="col-lg-11">
         <div class="row">
             <div class="col-lg-12">
-                <h6 class="label-content">Surat <?= $label_status ?> / <?= $label ?? '' ?></h6>
+                <h6 class="label-content"><?= lang ('Surat '. $label_status) ?> / <?= $label ?? '' ?></h6>
             </div>
         </div>
     </div>
@@ -82,7 +82,7 @@
                     </div>
 
                     <div class="col-lg-2">
-                        <button type="button" class="btn btn-primary btn-sm" onclick="return alert('File berhasil diunduh')">Unduh</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="return alert('File berhasil diunduh')"><?= lang ('Unduh') ?></button>
                     </div>
             </div>
             
