@@ -19,6 +19,17 @@ if (!isset($_SESSION['login'])) {
 } else {
     define('PARAM', $_GET['p'] ?? '');
     define('DATA_ID', $_GET['id'] ?? '');
+    define('ACTIVE_LANG', $_SESSION['lang'] ?? 'id');
+
+    if(isset($_GET['lang'])) {
+        $selectedLang = $_GET['lang'];
+        
+        $_SESSION['lang'] = $selectedLang;
+
+        $prevUrl = $_SERVER['HTTP_REFERER'] ?? '/';
+        header('location:'.$prevUrl);
+    }
+    // eakdd($_SESSION['lang']);
 
     $keyword = false;
     $pencarian_result = [];
@@ -49,7 +60,7 @@ if (!isset($_SESSION['login'])) {
     $last_data_surat_pengantar_ta = last_data_surat_pengantar_ta($status_data);
     $last_data_surat_rekomendasi_beasiswa = last_data_surat_rekomendasi_beasiswa($status_data);
     $last_data_surat_tugas_kompetisi = last_data_surat_tugas_kompetisi($status_data);
-
+    
     switch (PARAM):
         case 'logout':
         case 'menunggu_:':
@@ -78,10 +89,10 @@ if (!isset($_SESSION['login'])) {
             }
 
             $slug = 'surat_sam';
-            $column = ['tujuan', 'Tujuan'];
+            $column = ['tujuan', lang('Tujuan')];
             $data = data_surat_aktif_mahasiswa(null, $label_status);
 
-            $label = 'Surat Aktif Mahasiswa';
+            $label = lang('Surat Aktif Mahasiswa');
             $content = 'category_table_page.php';
             break;
             

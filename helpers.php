@@ -38,4 +38,23 @@ function data_pencarian($keyword) {
         return $results;
     }
 }
+
+// Translate to English only, coz we've coded in Bahasa
+function lang($text) {
+    $active_lang = ACTIVE_LANG;
+
+    if($active_lang == 'en') {
+        $translationList = array(
+            'Keluar' => 'Logout',
+            'Tanggal Pengajuan' => 'Submission Date',
+            'Aksi' => 'Action',
+            'Tujuan' => 'Purpose',
+            'Surat Aktif Mahasiswa' => 'Active Letters',
+        );
+
+        return $translationList[$text] ?? $text;
+    } else {
+        return $text;
+    }
+}
 ?>

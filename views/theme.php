@@ -85,15 +85,19 @@
     <!-- footerScript -->
     <script>
         $(function () {
+            $('#viewPdfModal').on('show.bs.modal', function (e) {
+                
+            });
+
             // Logic to handle surat form on view mode or not
-            <?php if(isset($_GET['form']) && $_GET['form'] == 'view') { ?>
-                $('.row-detail-page form.form-group').each(function() {
-                    $(this).on('submit', function(){
+            <?php if (isset($_GET['form']) && $_GET['form'] == 'view') { ?>
+                $('.row-detail-page form.form-group').each(function () {
+                    $(this).on('submit', function () {
                         return false;
                     });
 
                     $(this).find('input, select').attr({
-                        disabled : 'disabled'
+                        disabled: 'disabled'
                     });
 
                     $(this).find('button, small').hide();
@@ -101,10 +105,10 @@
             <?php } ?>
 
             // To handle select option on selected value
-            $('select').each(function(){
+            $('select').each(function () {
                 let selectedValue = $(this).attr('data-selected');
-                $(this).find('option').each(function(){
-                    if($(this).attr('value') == selectedValue) {
+                $(this).find('option').each(function () {
+                    if ($(this).attr('value') == selectedValue) {
                         $(this).attr('selected', 'selected');
                     }
                 });

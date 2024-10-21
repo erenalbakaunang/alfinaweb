@@ -259,6 +259,10 @@
         dateFormat: 'dd/mm/yy'
     });
 
+    function showModal() {
+        
+    }
+
 
     function init() {
         initSlimscroll();

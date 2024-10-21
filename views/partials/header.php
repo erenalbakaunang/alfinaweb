@@ -68,25 +68,25 @@
             <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-toggle="dropdown" href="#"
                 role="button" aria-haspopup="false" aria-expanded="false">
 
-                <img src="https://toss.telkomuniversity.ac.id/images/en.png" alt="" width="5em" class="text-muted">
-
+                <img src="assets/images/<?= ACTIVE_LANG ?>.png" alt="" width="5em" class="text-muted">
             </a>
+
             <div class="dropdown-menu dropdown-menu-right">
-                <a class="dropdown-item" href="/language/en">
-                    <img src="https://toss.telkomuniversity.ac.id/images/en.png" alt="" width="20em"
-                        class="text-muted mr-2">
-                    English</a>
+                <a class="dropdown-item" href="?lang=en">
+                    <img src="assets/images/en.png" alt="" width="20em" class="text-muted mr-2">
+                    English
+                </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/language/id">
-                    <img src="https://toss.telkomuniversity.ac.id/images/id.png" alt="" width="20em"
-                        class="text-muted mr-2"> Bahasa</a>
+                <a class="dropdown-item" href="?lang=id">
+                    <img src="assets/images/id.png" alt="" width="20em" class="text-muted mr-2"> 
+                    Bahasa
                 </a>
             </div>
         </li>
         <li class="dropdown">
             <a href="?p=logout" class="dropdown-item">
                 <button class="btn btn-danger">
-                    Keluar
+                    <?= lang('Keluar') ?>
                 </button>
             </a>
 
