@@ -82,7 +82,7 @@
                     </div>
 
                     <div class="col-lg-2">
-                        <button type="button" class="btn btn-primary btn-sm">Unduh</button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="return alert('File berhasil diunduh')">Unduh</button>
                     </div>
             </div>
             
