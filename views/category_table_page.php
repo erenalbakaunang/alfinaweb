@@ -33,7 +33,7 @@
                                 <td><?= $dt[$column[0]] ?></td>
                                 <td>
                                     <?php if (strtolower($label_status) == 'disetujui') { ?>
-                                        <a href="#" class="btn btn-success" onclick="return alert('File berhasil diunduh')"
+                                        <a href="#" class="btn btn-success" onclick="return alert('<?= lang('File berhasil diunduh') ?>')"
                                             title="Download">
                                             <i class="fa fa-download"></i>
                                         </a>
@@ -41,7 +41,7 @@
                                             <i class="fa fa-file-pdf"></i>
                                         </a>
                                     <?php } else { ?>
-                                        <a href="#" class="btn btn-danger" onclick="return confirm('Apa anda yakin?')"
+                                        <a href="#" class="btn btn-danger" onclick="return confirm('<?= lang('Apa anda yakin?') ?>')"
                                             title="Cancel">
                                             <i class="fa fa-exclamation-triangle"></i>
                                         </a>
@@ -82,7 +82,7 @@
                     </div>
 
                     <div class="col-lg-2">
-                        <button type="button" class="btn btn-primary btn-sm" onclick="return alert('File berhasil diunduh')"><?= lang ('Unduh') ?></button>
+                        <button type="button" class="btn btn-primary btn-sm" onclick="return alert('<?= lang('File berhasil diunduh') ?>')"><?= lang ('Unduh') ?></button>
                     </div>
             </div>
             

@@ -153,6 +153,8 @@ function lang($text) {
             'Kompetisi Nasional' => 'International Competition',
             'Kompetisi Internasional' => 'National Competition',
             'URL Kompetisi' => 'Competition URL',
+            'File berhasil diunduh' => 'File successfully downloaded',
+            'Apa anda yakin?' => 'Are you sure?',
         );
 
         return $translationList[$text] ?? $text;
