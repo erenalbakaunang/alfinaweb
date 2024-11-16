@@ -24,33 +24,43 @@
                     <thead>
                         <th><?= lang('Tanggal Pengajuan') ?></th>
                         <th><?= $column[1] ?></th>
+                        <th><?= lang('Status') ?></th>
+                        <?php if (strtolower($label_status) == 'ditolak') { ?>
+                            <th><?= lang('Alasan Ditolak') ?></th>
+                        <?php } ?>
                         <th><?= lang('Aksi') ?></th>
+
                     </thead>
                     <tbody>
                         <?php foreach ($data as $key => $dt) { ?>
                             <tr>
                                 <td><?= show_tanggal($dt['Tanggal']) ?></td>
                                 <td><?= $dt[$column[0]] ?></td>
+                                <td> <?= $dt['status'] ?>
+                                </td>
+                                <?php if (strtolower($label_status) == 'ditolak') { ?>
+                                    <td><?= $dt['alasan_ditolak'] ?? '-' ?></td>
+                                <?php } ?>
                                 <td>
+                                    <a href="?p=<?= $slug ?>&form=view&id=<?= $dt['id'] ?>" class="btn btn-info"
+                                        title="<?= lang('Lihat Data') ?>">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
                                     <?php if (strtolower($label_status) == 'disetujui') { ?>
                                         <a href="#" class="btn btn-success" onclick="return alert('<?= lang('File berhasil diunduh') ?>')"
-                                            title="Download">
+                                            title="<?= lang('Unduh') ?>">
                                             <i class="fa fa-download"></i>
                                         </a>
-                                        <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#viewPdfModal" title="viewPdf">
+                                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#viewPdfModal" title="<?= lang('Lihat Pdf') ?>">
                                             <i class="fa fa-file-pdf"></i>
                                         </a>
-                                    <?php } else { ?>
-                                        <a href="#" class="btn btn-danger" onclick="return confirm('<?= lang('Apa anda yakin?') ?>')"
-                                            title="Cancel">
-                                            <i class="fa fa-exclamation-triangle"></i>
+        
+                                    <?php } else if (strtolower($label_status) == 'menunggu') { ?> 
+                                        <a href="#" class="btn btn-danger" onclick="return confirm('<?= lang('Apakah Anda yakin ingin membatalkan surat?') ?>')" title="<?= lang('Batalkan') ?>">
+                                        <i class="fa fa-exclamation-triangle"></i>
                                         </a>
-                                    <?php } ?>
-                                    
-                                    <a href="?p=<?= $slug ?>&form=view&id=<?= $dt['id'] ?>" class="btn btn-info"
-                                        title="View">
-                                        <i class="fa fa-search"></i>
-                                    </a>
+                                    <?php } ?> 
+
                                 </td>
                             </tr>
                         <?php } ?>
@@ -98,3 +108,4 @@
         </div>
     </div>
 </div>
+

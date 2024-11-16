@@ -23,6 +23,11 @@
     <ul class="list-unstyled topbar-nav float-right mb-0">
         <li class="hidden-sm">
             <a class="nav-link  waves-effect waves-light" href="javascript: void(0);" role="button">
+            <?= lang ('STUDENT') ?> <i class="ml-2 fas fa-caret-down"></i>
+            </a>
+        </li>
+        <li class="hidden-sm">
+            <a class="nav-link  waves-effect waves-light" href="javascript: void(0);" role="button">
                 <i class="fas fa-bell"></i>
             </a>
         </li>

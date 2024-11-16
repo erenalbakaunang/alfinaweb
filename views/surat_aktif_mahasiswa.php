@@ -74,7 +74,7 @@
                 <div class="col-sm">
                     <label class="form-label"><?= lang ('Nomor Induk Pegawai Orang Tua') ?></label>
                     <input type="text" name="Nip_Ortu" class="form-control" value="<?= $data['Nip_Ortu']??null ?>" />
-                    <small><?= lang ('Nomor Induk Pegawai Orang Tua') ?></small>
+                    <small><?= lang ('Kosongkan jika tidak ada nik orang tua') ?></small>
                 </div>
             </div>
 

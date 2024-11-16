@@ -154,7 +154,18 @@ function lang($text) {
             'Kompetisi Internasional' => 'National Competition',
             'URL Kompetisi' => 'Competition URL',
             'File berhasil diunduh' => 'File successfully downloaded',
-            'Apa anda yakin?' => 'Are you sure?',
+            'Apakah Anda yakin ingin membatalkan surat?' => 'Are you sure you want to cancel the letter?',
+            'Alasan surat Anda ditolak dilihat disini'  => 'The reason your letter was rejected can be seen here' ,
+            'Kosongkan jika Tidak Ada Nomor Induk Pegawai Orang Tua' => 'Leave blank if there is no Parent Employee Identification Number' ,
+            'Informasi Surat Ditolak' => 'Rejected Letter Information',
+            'Lihat Pdf' => 'View Pdf' ,
+            'Info' => 'Information',
+            'Lihat Data' => 'View Data',
+            'Unduh' => 'Download',
+            'Batalkan' => 'Cancel',
+            'Tanggal Pengajuan:'  => 'Submission date:',
+            'Tanggal Diterbitkan:' => 'Approval date:',
+            'Tanggal Ditolak:' => 'Rejection date:',
         );
 
         return $translationList[$text] ?? $text;

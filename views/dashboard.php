@@ -1,10 +1,10 @@
 <!-- end page title end breadcrumb -->
 <div class="row">
-    <div class="col-lg-12">
+    <div class="col-lg-12" style="padding-top:20px; padding-left:25px">
         <h4><?= lang('Pencarian Surat')?></h4>
     </div>
 
-    <div class="col-lg-12">
+    <div class="col-lg-12" style="padding-top:10px; padding-left:25px; padding-right:25px">
         <form action="?p=pencarian" method="POST" class="form form-group">
             <div class="input-group mb-3">
                 <input type="text" name="keyword" class="form-control" placeholder=<?= lang('"pencarian..."')?> aria-label="pencarian"
@@ -45,7 +45,7 @@
                 <h4><?=lang('Status Surat')?></h4>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4" style="padding-top:10px">
                 <div class="card">
                     <div class="card-body">
                         <div class="icon-contain">
@@ -77,7 +77,7 @@
                 <!--end card-->
             </div>
             <!--end col-->
-            <div class="col-lg-4">
+            <div class="col-lg-4" style="padding-top:10px">
                 <div class="card">
                     <div class="card-body">
                         <div class="icon-contain">
@@ -111,7 +111,7 @@
             <!--end col-->
 
 
-            <div class="col-lg-4">
+            <div class="col-lg-4" style="padding-top:10px">
                 <div class="card">
                     <div class="card-body">
                         <div class="icon-contain">
@@ -144,11 +144,11 @@
             </div>
             <!--end col-->
 
-            <div class="col-lg-12">
+            <div class="col-lg-12" style="padding-top:10px">
                 <h4><?= lang('Panduan Pengguna')?></h4>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4" style="padding-top:10px">
                 <div class="card">
                     <div class="card-body">
                         <div class="icon-contain">

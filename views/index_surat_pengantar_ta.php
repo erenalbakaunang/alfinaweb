@@ -23,16 +23,20 @@
                             <td><?= $dt['tipe_penelitian'] ?></td>
                             <td><?= $dt['status'] ?></td>
                             <td>
-                                <a href="?p=surat_spt&form=view&id=<?= $dt['id'] ?>" class="btn btn-info" title="View">
-                                    <i class="fa fa-search"></i>
+                                <a href="?p=surat_spt&form=view&id=<?= $dt['id'] ?>" class="btn btn-info" title="<?= lang('Lihat Data') ?>">
+                                    <i class="fa fa-eye"></i>
                                 </a>
                                 
                                 <?php if(strtolower($dt['status']) == 'disetujui') { ?>
-                                    <a href="#" class="btn btn-success" onclick="return alert('File berhasil diunduh')" title="Download">
+                                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#viewPdfModal" title="<?= lang('Lihat Pdf') ?>">
                                         <i class="fa fa-file-pdf"></i>
                                     </a>
-                                <?php } else { ?>
-                                    <a href="#" class="btn btn-danger" onclick="return confirm('Apa anda yakin?')" title="Cancel">
+                                    <a href="#" class="btn btn-success" onclick="return alert('<?= lang('File berhasil diunduh') ?>')"
+                                            title="<?= lang('Unduh') ?>">
+                                            <i class="fa fa-download"></i>
+                                    </a>
+                                <?php } elseif(strtolower($dt['status']) == 'menunggu') { ?>
+                                    <a href="#" class="btn btn-danger" onclick="return confirm('<?= lang('Apakah Anda yakin ingin membatalkan surat?') ?>')" title="<?= lang('Batalkan') ?>">
                                         <i class="fa fa-exclamation-triangle"></i>
                                     </a>
                                 <?php } ?>
@@ -45,3 +49,41 @@
         </div>
     </div>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="viewPdfModal" tabindex="-1" role="dialog" aria-labelledby="viewPdfModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                
+                    <div class="col-lg-1">
+                        <button style="margin:0;padding:0;line-height:35px;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                                <i class="far fa-times-circle"></i>
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="col-lg-9">
+                        <h5 class="modal-title" id="exampleModalLabel" style="line-height: 35px; font-size:14px;">
+                        <?= lang ('Surat Pengantar TA') ?>
+                        </h5>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <button type="button" class="btn btn-primary btn-sm" onclick="return alert('<?= lang('File berhasil diunduh') ?>')"><?= lang ('Unduh') ?></button>
+                    </div>
+            </div>
+            
+            <div class="modal-body">
+                <div class="t-center">
+                    <div style="padding: 150px 200px">
+                        <i class="fa fa-5x fa-file-pdf"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer d-none">
+            </div>
+        </div>
+    </div>
+</div>
+
