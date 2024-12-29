@@ -164,8 +164,8 @@ function lang($text) {
             'Unduh' => 'Download',
             'Batalkan' => 'Cancel',
             'Tanggal Pengajuan:'  => 'Submission date:',
-            'Tanggal Diterbitkan:' => 'Approval date:',
-            'Tanggal Ditolak:' => 'Rejection date:',
+            'Tanggal Penerbitan:' => 'Approval date:',
+            'Tanggal Penolakan:' => 'Rejection date:',
         );
 
         return $translationList[$text] ?? $text;

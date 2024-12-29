@@ -27,7 +27,7 @@
                                     <small>
                             
                                     </small><br />
-                                    <?=lang ('Tanggal Penolakan:')?> 
+                                    <?=lang ('Tanggal Penerbitan:')?> 
                                     <?= !empty($last_data_surat_aktif_mahasiswa['tanggal_akhir']) ? show_tanggal($last_data_surat_aktif_mahasiswa['tanggal_akhir']) : '-' ?>
                             </p>
                             
@@ -64,7 +64,7 @@
                                     <small>
                             
                                     </small><br />
-                                    <?=lang ('Tanggal Penolakan:')?> 
+                                    <?=lang ('Tanggal Penerbitan:')?> 
                                     <?= !empty($last_data_surat_pengantar_mata_kuliah['tanggal_akhir']) ? show_tanggal($last_data_surat_pengantar_mata_kuliah['tanggal_akhir']) : '-' ?>
                             </p>
                         </h6>
@@ -100,7 +100,7 @@
                                     <small>
                             
                                     </small><br />
-                                    <?=lang ('Tanggal Penolakan:')?> 
+                                    <?=lang ('Tanggal Penerbitan:')?> 
                                     <?= !empty($last_data_surat_pengantar_ta['tanggal_akhir']) ? show_tanggal($last_data_surat_pengantar_ta['tanggal_akhir']) : '-' ?>
                             </p>
                         </h6>
@@ -137,7 +137,7 @@
                                     <small>
                             
                                     </small><br />
-                                    <?=lang ('Tanggal Penolakan:')?> 
+                                    <?=lang ('Tanggal Penerbitan:')?> 
                                     <?= !empty($last_data_surat_pengantar_kp['tanggal_akhir']) ? show_tanggal($last_data_surat_pengantar_kp['tanggal_akhir']) : '-' ?>
                         </p>
                     </h6> 
@@ -173,7 +173,7 @@
                                     <small>
                             
                                     </small><br />
-                                    <?=lang ('Tanggal Penolakan:')?> 
+                                    <?=lang ('Tanggal Penerbitan:')?> 
                                     <?= !empty($last_data_surat_dispensasi['tanggal_akhir']) ? show_tanggal($last_data_surat_dispensasi['tanggal_akhir']) : '-' ?>
                         </p>
                         </h6>
@@ -209,7 +209,7 @@
                                     <small>
                             
                                     </small><br />
-                                    <?=lang ('Tanggal Penolakan:')?> 
+                                    <?=lang ('Tanggal Penerbitan:')?> 
                                     <?= !empty($last_data_surat_rekomendasi_beasiswa['tanggal_akhir']) ? show_tanggal($last_data_surat_rekomendasi_beasiswa['tanggal_akhir']) : '-' ?>
                         </p>
                             
@@ -246,7 +246,7 @@
                                     <small>
                             
                                     </small><br />
-                                    <?=lang ('Tanggal Penolakan:')?> 
+                                    <?=lang ('Tanggal Penerbitan:')?> 
                                     <?= !empty($last_data_surat_berkelakuan_baik['tanggal_akhir']) ? show_tanggal($last_data_surat_berkelakuan_baik['tanggal_akhir']) : '-' ?>
                         </p>
                             
@@ -283,7 +283,7 @@
                                     <small>
                             
                                     </small><br />
-                                    <?=lang ('Tanggal Penolakan:')?> 
+                                    <?=lang ('Tanggal Penerbitan:')?> 
                                     <?= !empty($last_data_surat_tugas_kompetisi['tanggal_akhir']) ? show_tanggal($last_data_surat_tugas_kompetisi['tanggal_akhir']) : '-' ?>
                         </p>
                             
